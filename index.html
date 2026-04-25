@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetYourCase - Premium iPhone Hüllen</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/images/Wort-:Bildmarke white background.png" alt="GetYourCase Logo">
+            </div>
+            
+            <div class="search-bar" role="search">
+                <label for="searchInput" class="visually-hidden">Hüllen suchen</label>
+                <input type="text" id="searchInput" placeholder="Suche nach iPhone Hüllen...">
+                <button onclick="searchProducts()" aria-label="Suche starten">Suchen</button>
+            </div>
+        </div>
+    </header>
+
+    <nav aria-label="Hauptnavigation">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="select-device.html">Gerät wählen</a></li>
+                <li><a href="deals.html">Angebote</a></li>
+                <li><a href="about.html">Über uns</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+                <li><a href="barrierefrei.html">Barrierefreiheit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+   <main id="main-content">
+    <section class="video-banner-container" aria-label="Promotion Video">
+        <video autoplay loop muted playsinline class="video-banner">
+            <source src="assets/videos/banner.mp4" type="video/mp4">
+            Ihr Browser unterstützt keine eingebetteten Videos.
+        </video>
+        
+        <div class="video-overlay-content">
+            <h1>Premium Schutz</h1>
+            <p></p>
+        </div>
+    </section>
+
+        <section class="hero-banner">
+            <div class="hero-content">
+                <h1>Guter Schutz für gutes Style</h1>
+                <p>Dein Handy braucht Sicherheit, du brauchst Stil. Entdecke Hüllen, die beides können.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="filters" aria-labelledby="filter-heading">
+                <h2 id="filter-heading" class="visually-hidden">Produkte filtern</h2>
+                <div class="filter-group">
+                    <label for="modelFilter">iPhone Modell:</label>
+                    <select id="modelFilter" onchange="filterProducts()">
+                        <option value="">Alle Modelle</option>
+                        <option value="iPhone 15 Pro">iPhone 15 Pro</option>
+                        <option value="iPhone 15">iPhone 15</option>
+                        <option value="iPhone 14">iPhone 14</option>
+                        <option value="iPhone 13">iPhone 13</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="materialFilter">Material:</label>
+                    <select id="materialFilter" onchange="filterProducts()">
+                        <option value="">Alle Materialien</option>
+                        <option value="Silikon">Silikon</option>
+                        <option value="Leder">Leder</option>
+                        <option value="Kunststoff">Kunststoff</option>
+                    </select>
+                </div>
+            </section>
+
+            <div class="products-grid" id="productsGrid" aria-live="polite">
+                </div>
+
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <div class="empty-state-icon" aria-hidden="true">🔍</div>
+                <h3>Keine Hüllen gefunden</h3>
+            </div>
+        </div>
+    </main>
+
+    <div id="productModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Produktdetails</h2>
+                <button class="close-btn" onclick="closeModal()" aria-label="Modal schließen">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="" class="modal-img-display">
+                <div class="modal-details">
+                    <p id="modalModel" style="color: #444; font-weight: bold;"></p>
+                    <p id="modalDescription"></p>
+                    <h3>Eigenschaften</h3>
+                    <ul class="spec-list" id="modalSpecs"></ul>
+                    <div class="modal-price" id="modalPrice"></div>
+                    <div class="modal-actions">
+                        <button class="btn-add-cart">In den Warenkorb</button>
+                        <button class="btn-favorites">♡ Favoriten</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>GetYourCases</h3>
+                <p>Premium iPhone Hüllen aus Wien.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Email: info@getyourcases.at</p>
+                <p>Standort: Wien, Österreich</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GetYourCases. Als österreichisches Unternehmen bieten wir freien Zugang zum österreichischen Arbeitsmarkt.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
