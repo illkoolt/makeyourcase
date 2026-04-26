@@ -3,9 +3,811 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Über uns - GetYourCase</title>
+    <meta name="description" content="Über MAKEYOURCASE - Web Editor für Phone Case Shops. Unsere Mission ist es, Shop-Besitzern zu helfen, neue Kundengruppen zu erschließen.">
+    <title>Über uns - MAKEYOURCASE</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
+        .about-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .about-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .about-intro h1 {
+            font-size: 3rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .about-intro h2 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .about-intro p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+
+        .mission-card {
+            background: var(--bg-primary);
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .mission-card h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .mission-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .features-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+
+        .brand-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .brand-image {
+            width: 100%;
+            height: 200px;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .brand-image img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .brand-card h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .brand-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .nice-classes {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+            margin-top: 1.5rem;
+        }
+
+        .nice-classes h3 {
+            font-size: 1rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .nice-classes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nice-classes li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .nice-classes li:before {
+            content: "✓ ";
+            color: var(--primary);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .design-principles {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 4rem 3rem;
+            border-radius: 20px;
+            margin: 4rem 0;
+        }
+
+        .design-principles h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            font-weight: 900;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .principle {
+            background: rgba(255,255,255,0.15);
+            padding: 2rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .principle:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-5px);
+        }
+
+        .principle h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .principle p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .vision-section {
+            background: var(--bg-secondary);
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            border-left: 5px solid var(--secondary);
+        }
+
+        .vision-section h3 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .vision-section p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .cta-final {
+            background: var(--bg-secondary);
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .cta-final h3 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .cta-final p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-intro h1 {
+                font-size: 2rem;
+            }
+
+            .design-principles {
+                padding: 2rem;
+            }
+
+            .design-principles h2 {
+                font-size: 1.8rem;
+            }
+
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+
+            .features-showcase {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/images/Wort-:Bildmarke white background.png" alt="MAKEYOURCASE Logo">
+                <div class="logo-text">
+                    <h1>MAKEYOURCASE</h1>
+                    <p>Web Editor für Phone Case Shops</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav aria-label="Hauptnavigation">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html" class="active" aria-current="page">Über uns</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+                <li><a href="barrierefrei.html">Barrierefreiheit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="about-section">
+            <div class="about-intro">
+                <h1>Über MAKEYOURCASE</h1>
+                <h2>Der Web-Editor für Phone Case Shops</h2>
+                <p>MAKEYOURCASE ist eine innovative SaaS-Lösung, die Shop-Besitzern dabei hilft, völlig neue Kundengruppen zu erschließen. Mit unserem intuitiven Web-Editor können Ihre Kunden ihre eigenen einzigartigen Designs erstellen und als hochwertige gedruckte Handyhüllen erhalten.</p>
+            </div>
+
+            <div class="mission-vision">
+                <div class="mission-card">
+                    <h2>🎯 Unsere Mission</h2>
+                    <p>Shop-Besitzern die Technologie geben, um individuelle Handyhüllen-Designs zu ermöglichen. Dabei neue Revenue-Streams schaffen und Kundenbeziehungen vertiefen.</p>
+                </div>
+
+                <div class="mission-card">
+                    <h2>🚀 Unsere Vision</h2>
+                    <p>Der führende Web-Editor für personalisierte Phone Cases. Shops weltweit nutzen MAKEYOURCASE um ihre Umsätze zu steigern und Kundenzufriedenheit zu erhöhen.</p>
+                </div>
+
+                <div class="mission-card">
+                    <h2>💡 Unser Ansatz</h2>
+                    <p>Technologie sollte einfach sein. Unser Editor braucht keine Designer-Kenntnisse. Jeder Kunde kann professionelle Designs erstellen.</p>
+                </div>
+            </div>
+
+            <div class="vision-section">
+                <h3>📱 Das Problem, das wir lösen</h3>
+                <p>Shop-Besitzer verkaufen Standard-Hüllen in großen Mengen. Das ist günstig, aber nicht profitabel. MAKEYOURCASE öffnet ein neues Geschäftsfeld: Individualisierte, personalisierte Cases mit hohem Gewinn. Kunden bekommen ihre eigenen Designs, Sie generieren zusätzliche Umsätze. Win-Win!</p>
+            </div>
+
+            <div class="design-principles">
+                <h2>Unsere Core Values</h2>
+                <div class="principles-grid">
+                    <div class="principle">
+                        <h3>🎨 Einfachheit</h3>
+                        <p>Technologie sollte einfach zu verstehen sein. Kein technisches Wissen erforderlich. Der Editor macht es möglich.</p>
+                    </div>
+                    <div class="principle">
+                        <h3>💪 Qualität</h3>
+                        <p>Hochleistungs-Drucker, UV-beständige Farben, 300 DPI. Ihre Kunden bekommen beste Qualität oder Geld zurück.</p>
+                    </div>
+                    <div class="principle">
+                        <h3>🤝 Partnerschaft</h3>
+                        <p>Sie sind nicht einfach ein Kunde. Sie sind unser Partner. Ihr Erfolg ist unser Erfolg. Das ist unsere Philosophie.</p>
+                    </div>
+                    <div class="principle">
+                        <h3>🌍 Innovation</h3>
+                        <p>Wir entwickeln ständig neue Features. Ihr Feedback formt unsere Roadmap. Gemeinsam schaffen wir die Zukunft.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vision-section">
+                <h3>💼 Geschäftsmodell für Shop-Besitzer</h3>
+                <p><strong>Alte Welt:</strong> Sie kaufen 100 Standard-Cases. Verkaufen sie zu Standardpreisen. Kleine Margen.</p>
+                <p><strong>Neue Welt (mit MAKEYOURCASE):</strong> Kunde erstellt ihr eigenes Design. Sie drucken es auf beste Qualität. Der Kunde zahlt Premium-Preis. Sie machen 40-60% Gewinn pro Case. Das ist neue Revenue!</p>
+            </div>
+
+            <div class="features-showcase">
+                <div class="brand-card">
+                    <h2>💻 Der Editor</h2>
+                    <p>Intuitives Drag-and-Drop Interface. Ihre Kunden brauchen nur wenige Minuten um ein professionelles Design zu erstellen. Alle Funktionen, die sie brauchen: Text, Bilder, Effekte, Farben.</p>
+                    <div class="nice-classes">
+                        <h3>Was Kunden lieben</h3>
+                        <ul>
+                            <li>Einfach zu bedienen</li>
+                            <li>Schnelle Ergebnisse</li>
+                            <li>Live-Vorschau</li>
+                            <li>Unbegrenzte Designs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="brand-card">
+                    <h2>📊 Analytics & Dashboard</h2>
+                    <p>Sehen Sie genau, welche Designs beliebt sind. Welche Farben, Muster, Styles funktionieren. Nutzen Sie diese Daten für Marketing und Produktentwicklung.</p>
+                    <div class="nice-classes">
+                        <h3>Metriken & Reports</h3>
+                        <ul>
+                            <li>Umsatz-Tracking</li>
+                            <li>Bestseller-Analyse</li>
+                            <li>Kundenverhalten</li>
+                            <li>Design-Trends</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="brand-card">
+                    <h2>🖨️ Premium Druck</h2>
+                    <p>Hochleistungs-Drucker mit 300 DPI. UV-beständige Farben. Automatische Qualitätsprüfung. Jeder Case wird perfekt. Ihre Kunden werden begeistert sein.</p>
+                    <div class="nice-classes">
+                        <h3>Druckqualität</h3>
+                        <ul>
+                            <li>300 DPI Auflösung</li>
+                            <li>UV-Farben</li>
+                            <li>Automatische Prüfung</li>
+                            <li>Garantierte Qualität</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-final">
+                <h3>🚀 Bereit, Ihren Shop zu transformieren?</h3>
+                <p>Tausende Shop-Besitzer nutzen MAKEYOURCASE bereits um neue Kundengruppen zu erschließen und Umsätze zu steigern.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="pricing.html" style="padding: 1rem 2rem; background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 800; transition: all 0.3s ease;">Preise ansehen</a>
+                    <a href="features.html" style="padding: 1rem 2rem; background: var(--bg-secondary); color: var(--primary); border: 2px solid var(--primary); text-decoration: none; border-radius: 50px; font-weight: 800; transition: all 0.3s ease;">Alle Features</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>MAKEYOURCASE</h3>
+                <p>Web Editor für Phone Case Shops. Helfe Shop-Besitzern, neue Kundengruppen zu erschließen und Umsätze zu steigern.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Email: info@makeyourcase.at</p>
+                <p>Support: support@makeyourcase.at</p>
+            </div>
+            <div class="footer-section">
+                <h3>Information</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="datenschutz.html">Datenschutz</a></li>
+                    <li><a href="barrierefrei.html">Barrierefreiheit</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MAKEYOURCASE. Die webbasierte Editor-Lösung für Handyhüllen-Shops.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+        .about-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .about-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .about-intro h1 {
+            font-size: 3rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .about-intro h2 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .about-intro p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .brands-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+
+        .brand-card {
+            background: var(--bg-primary);
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .brand-image {
+            width: 100%;
+            height: 200px;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .brand-image img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .brand-card h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .brand-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .nice-classes {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+            margin-top: 1.5rem;
+        }
+
+        .nice-classes h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .nice-classes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nice-classes li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .nice-classes li:before {
+            content: "✓ ";
+            color: var(--primary);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .design-principles {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 4rem 3rem;
+            border-radius: 20px;
+            margin: 4rem 0;
+        }
+
+        .design-principles h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            font-weight: 900;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .principle {
+            background: rgba(255,255,255,0.15);
+            padding: 2rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .principle:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-5px);
+        }
+
+        .principle h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .principle p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .vision-section {
+            background: var(--bg-secondary);
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            border-left: 5px solid var(--secondary);
+        }
+
+        .vision-section h3 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .vision-section p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-intro h1 {
+                font-size: 2rem;
+            }
+
+            .design-principles {
+                padding: 2rem;
+            }
+
+            .design-principles h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/images/Wort-:Bildmarke white background.png" alt="MAKEYOURCASE Logo">
+                <div class="logo-text">
+                    <h1>MAKEYOURCASE</h1>
+                    <p>Premium Design für dein Gerät</p>
+                </div>
+            </div>
+            
+            <div class="search-bar" role="search">
+                <label for="searchInput" class="visually-hidden">Hüllen suchen</label>
+                <input type="text" id="searchInput" placeholder="Suche nach Hüllen...">
+                <button onclick="searchProducts()" aria-label="Suche starten">Suchen</button>
+            </div>
+        </div>
+    </header>
+
+    <nav aria-label="Hauptnavigation">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="select-device.html">Gerät wählen</a></li>
+                <li><a href="deals.html">Angebote</a></li>
+                <li><a href="about.html" class="active" aria-current="page">Über uns</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+                <li><a href="barrierefrei.html">Barrierefreiheit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="about-section">
+            <div class="about-intro">
+                <h1>Über MAKEYOURCASE</h1>
+                <h2>Sie sind der Eigentümer eines Start-Ups und vertreiben Software über einen Webshop im Internet.</h2>
+                <p>MAKEYOURCASE ist ein innovatives Start-Up, das hochwertige, personalisierte Handyhüllen mit Premium-Druckqualität anbietet. Wir kombinieren modernes Design mit handwerklicher Qualität – langweilige Cases waren gestern!</p>
+            </div>
+
+            <div class="vision-section">
+                <h3>📱 Unsere Vision</h3>
+                <p>Wir revolutionieren den Markt für Handyhüllen durch individuelle Personalisierung und erstklassige Druckqualität. Jede Case ist ein Kunstwerk – mit 300 DPI Auflösung, UV-beständigen Farben und perfektem Sitz für dein Gerät.</p>
+            </div>
+
+            <div class="design-principles">
+                <h2>Unsere Design-Philosophie</h2>
+                <div class="principles-grid">
+                    <div class="principle">
+                        <h3>🎨 Kreativität</h3>
+                        <p>Unbegrenzte Designmöglichkeiten für deine persönlichen Ideen. Wir setzen deine Vision perfekt um.</p>
+                    </div>
+                    <div class="principle">
+                        <h3>🔒 Qualität</h3>
+                        <p>Premium-Materialien und Hochleistungsdrucker für fehlerfreie Ergebnisse. Deine Case sieht scharf und lebendig aus.</p>
+                    </div>
+                    <div class="principle">
+                        <h3>📱 Kompatibilität</h3>
+                        <p>Alle modernen Geräte. Perfekter Sitz und vollständiger Schutz für iPhone, Samsung und mehr.</p>
+                    </div>
+                    <div class="principle">
+                        <h3>⚡ Innovation</h3>
+                        <p>Moderne Farb-Designs und responsive Webshop-Technologie für dein Business.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="brands-showcase">
+                <div class="brand-card">
+                    <div class="brand-image">
+                        <img src="assets/images/clear case.jpg" alt="Crystal Clear Case">
+                    </div>
+                    <h2>Crystal Clear Cases</h2>
+                    <p>Transparente Hüllen, die die Originalfarbe deines Geräts zeigen. Mit vergilbungsfreiem Material und Extra-Grip.</p>
+                    <div class="nice-classes">
+                        <h3>Eigenschaften</h3>
+                        <ul>
+                            <li>Ultradünn & leicht</li>
+                            <li>Vergilbungsfrei</li>
+                            <li>Militärischer Schutz</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-image">
+                        <img src="assets/images/leather.jpg" alt="Premium Leather Edition">
+                    </div>
+                    <h2>Leather Collection</h2>
+                    <p>Echtes Leder für ein luxuriöses Gefühl. Perfekt für Business und Alltag.</p>
+                    <div class="nice-classes">
+                        <h3>Eigenschaften</h3>
+                        <ul>
+                            <li>Echtes Premium-Leder</li>
+                            <li>Mikrofaser-Innenfutter</li>
+                            <li>Edle Patina</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-image">
+                        <img src="assets/images/clear magsafe.jpg" alt="MagSafe Armor Case">
+                    </div>
+                    <h2>MagSafe Collection</h2>
+                    <p>Integrierte Magnete für perfektes kabelloses Laden. Stoßfest und kratzfest.</p>
+                    <div class="nice-classes">
+                        <h3>Eigenschaften</h3>
+                        <ul>
+                            <li>MagSafe optimiert</li>
+                            <li>Stoß & Kratzfest</li>
+                            <li>Modernes Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vision-section">
+                <h3>🚀 Für dein Start-Up</h3>
+                <p>Nutze MAKEYOURCASE als Vorlage für dein eigenes Business. Vollständig konfigurierbar, mit modernem Webshop, responsive Design, individuellen Farbschemen und Premium-Druckqualität. Dein Start-Up verdient mehr als langweilige Templates – bei uns bekommst du Qualität auf Augenhöhe.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>MAKEYOURCASE</h3>
+                <p>Premium Handyhüllen & personalisierte Cases. Dein Start-Up für individuelle Webshop-Designs.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Email: info@makeyourcase.at</p>
+                <p>Support: support@makeyourcase.at</p>
+            </div>
+            <div class="footer-section">
+                <h3>Informationen</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="datenschutz.html">Datenschutz</a></li>
+                    <li><a href="barrierefrei.html">Barrierefreiheit</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MAKEYOURCASE. Langweilige Cases waren gestern!</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
         .about-section {
             max-width: 1200px;
             margin: 0 auto;

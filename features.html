@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Features - MAKEYOURCASE Web Editor für Phone Case Shops. Alle Funktionen und Möglichkeiten.">
+    <title>Features - MAKEYOURCASE Web Editor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .features-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .features-header h1 {
+            font-size: 2.8rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 900;
+        }
+
+        .features-header p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: var(--bg-primary);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .feature-card li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .feature-card li:before {
+            content: "✓ ";
+            color: var(--primary);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .tech-specs {
+            background: var(--bg-secondary);
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 4rem 0;
+        }
+
+        .tech-specs h2 {
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            font-weight: 900;
+        }
+
+        .tech-specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .tech-spec-item {
+            background: var(--bg-primary);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .tech-spec-item strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            margin: 3rem 0;
+            border-collapse: collapse;
+            background: var(--bg-primary);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 1.5rem;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        .comparison-table td {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--bg-secondary);
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .check {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .features-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .features-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-specs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/images/Wort-:Bildmarke white background.png" alt="MAKEYOURCASE Logo">
+                <div class="logo-text">
+                    <h1>MAKEYOURCASE</h1>
+                    <p>Web Editor für Phone Case Shops</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav aria-label="Hauptnavigation">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html" class="active" aria-current="page">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">Über uns</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+                <li><a href="barrierefrei.html">Barrierefreiheit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <div class="features-container">
+            <div class="features-header">
+                <h1>Alle Features des MAKEYOURCASE Editors</h1>
+                <p>Vollständig ausgestattete Lösung für Phone Case Shops zur Kundengewinnung und Umsatzsteigerung.</p>
+            </div>
+
+            <div class="features-list">
+                <div class="feature-card">
+                    <h3>🎨 Design-Editor</h3>
+                    <p>Intuitivers Drag-and-Drop Interface für Kundendesigns:</p>
+                    <ul>
+                        <li>Unbegrenzter Design-Platz</li>
+                        <li>Text-Tools mit Schriftarten</li>
+                        <li>Bildimport & -bearbeitung</li>
+                        <li>Farbpalette & Effekte</li>
+                        <li>Live-Vorschau</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>📱 Multi-Device Support</h3>
+                    <p>Unterstützt alle modernen Geräte:</p>
+                    <ul>
+                        <li>iPhone 13-15 (Pro/Max)</li>
+                        <li>Samsung Galaxy Reihen</li>
+                        <li>Google Pixel</li>
+                        <li>OnePlus & andere</li>
+                        <li>Laufend aktualisiert</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>💾 Design-Speicherung</h3>
+                    <p>Intelligente Cloud-Speicherung:</p>
+                    <ul>
+                        <li>Designs speichern & laden</li>
+                        <li>Versions-Historie</li>
+                        <li>Kundenprofil-Integration</li>
+                        <li>Automatische Backups</li>
+                        <li>Unbegrenzter Speicher</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🖨️ Premium-Druck Integration</h3>
+                    <p>Vollständig automatisierter Druckprozess:</p>
+                    <ul>
+                        <li>300 DPI Hochauflösung</li>
+                        <li>UV-beständige Farben</li>
+                        <li>Automatische Qualitätsprüfung</li>
+                        <li>Druck-Partner Integration</li>
+                        <li>Tracking & Status</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>💳 E-Commerce Integration</h3>
+                    <p>Nahtlose Shop-Integration:</p>
+                    <ul>
+                        <li>Warenkorb-Verwaltung</li>
+                        <li>Zahlungs-Gateways</li>
+                        <li>Versand-Integration</li>
+                        <li>Bestellung-Tracking</li>
+                        <li>Kundenverwaltung</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>📊 Analytics & Dashboard</h3>
+                    <p>Datengesteuerte Insights:</p>
+                    <ul>
+                        <li>Umsatz-Tracking</li>
+                        <li>Bestseller-Analyse</li>
+                        <li>Kundenverhalten</li>
+                        <li>Design-Trends</li>
+                        <li>ROI-Metriken</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🔐 Sicherheit & Compliance</h3>
+                    <p>Enterprise-Grade Sicherheit:</p>
+                    <ul>
+                        <li>SSL-Verschlüsselung</li>
+                        <li>DSGVO-konform</li>
+                        <li>PCI-DSS zertifiziert</li>
+                        <li>Datensicherung</li>
+                        <li>Support 24/7</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🎯 Responsive Design</h3>
+                    <p>Funktioniert auf allen Bildschirmen:</p>
+                    <ul>
+                        <li>Mobile-optimiert</li>
+                        <li>Tablet-friendly</li>
+                        <li>Desktop-Erlebnis</li>
+                        <li>Touch-gestures</li>
+                        <li>Schnelle Ladezeiten</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🛠️ Admin-Panel</h3>
+                    <p>Vollständige Kontrollzentrale:</p>
+                    <ul>
+                        <li>Bestellung-Verwaltung</li>
+                        <li>Kunde-Management</li>
+                        <li>Design-Moderation</li>
+                        <li>Preis-Verwaltung</li>
+                        <li>Report-Generierung</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tech-specs">
+                <h2>🔧 Technische Spezifikationen</h2>
+                <div class="tech-specs-grid">
+                    <div class="tech-spec-item">
+                        <strong>Auflösung</strong>
+                        <p>300 DPI für scharfe, hochwertige Drucke</p>
+                    </div>
+                    <div class="tech-spec-item">
+                        <strong>Farben</strong>
+                        <p>UV-beständige, Premium-Tinte für langlebige Designs</p>
+                    </div>
+                    <div class="tech-spec-item">
+                        <strong>Verfügbarkeit</strong>
+                        <p>99.9% Uptime SLA</p>
+                    </div>
+                    <div class="tech-spec-item">
+                        <strong>Support</strong>
+                        <p>24/7 Tech-Support & Kundenservice</p>
+                    </div>
+                    <div class="tech-spec-item">
+                        <strong>Skalierbarkeit</strong>
+                        <p>Unbegrenzte gleichzeitige Benutzer</p>
+                    </div>
+                    <div class="tech-spec-item">
+                        <strong>API</strong>
+                        <p>Volle REST API für benutzerdefinierte Integrationen</p>
+                    </div>
+                </div>
+            </div>
+
+            <section style="margin: 4rem 0; text-align: center;">
+                <h2 style="font-size: 2rem; color: var(--text-primary); margin-bottom: 2rem; font-weight: 900;">Ready to get started?</h2>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem;">Lassen Sie sich noch heute eine kostenlose Demo zeigen und sehen Sie, wie MAKEYOURCASE Ihren Shop transformiert.</p>
+                <a href="pricing.html" style="padding: 1.2rem 2.5rem; background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: white; text-decoration: none; border-radius: 50px; display: inline-block; font-weight: 800; transition: all 0.3s ease; box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);">Preise & Pakete anschauen</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>MAKEYOURCASE</h3>
+                <p>Web Editor für Phone Case Shops.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Email: info@makeyourcase.at</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MAKEYOURCASE</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

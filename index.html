@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GetYourCase - Premium iPhone Hüllen</title>
+    <meta name="description" content="MAKEYOURCASE - Web Application Editor für Handyhüllen-Shops. Verwandle deinen Shop mit individuellen Design-Möglichkeiten und modernem Editor.">
+    <title>MAKEYOURCASE - Web Editor für Phone Case Shops</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -12,12 +13,16 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="assets/images/Wort-:Bildmarke white background.png" alt="GetYourCase Logo">
+                <img src="assets/images/Wort-:Bildmarke white background.png" alt="MAKEYOURCASE Logo">
+                <div class="logo-text">
+                    <h1>MAKEYOURCASE</h1>
+                    <p>Web Editor für Phone Case Shops</p>
+                </div>
             </div>
             
             <div class="search-bar" role="search">
-                <label for="searchInput" class="visually-hidden">Hüllen suchen</label>
-                <input type="text" id="searchInput" placeholder="Suche nach iPhone Hüllen...">
+                <label for="searchInput" class="visually-hidden">Suche</label>
+                <input type="text" id="searchInput" placeholder="Finde Lösungen für deinen Shop...">
                 <button onclick="searchProducts()" aria-label="Suche starten">Suchen</button>
             </div>
         </div>
@@ -27,8 +32,8 @@
         <div class="nav-container">
             <ul class="nav-links">
                 <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-                <li><a href="select-device.html">Gerät wählen</a></li>
-                <li><a href="deals.html">Angebote</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="about.html">Über uns</a></li>
                 <li><a href="datenschutz.html">Datenschutz</a></li>
                 <li><a href="barrierefrei.html">Barrierefreiheit</a></li>
@@ -37,67 +42,170 @@
     </nav>
 
    <main id="main-content">
-    <section class="video-banner-container" aria-label="Promotion Video">
+    <section class="video-banner-container" aria-label="Produkt-Video">
         <video autoplay loop muted playsinline class="video-banner">
             <source src="assets/videos/banner.mp4" type="video/mp4">
             Ihr Browser unterstützt keine eingebetteten Videos.
         </video>
         
         <div class="video-overlay-content">
-            <h1>Premium Schutz</h1>
-            <p></p>
+            <h1>MAKEYOURCASE Editor</h1>
+            <p>Die Lösung für moderne Phone Case Shops</p>
         </div>
     </section>
 
         <section class="hero-banner">
             <div class="hero-content">
-                <h1>Guter Schutz für gutes Style</h1>
-                <p>Dein Handy braucht Sicherheit, du brauchst Stil. Entdecke Hüllen, die beides können.</p>
+                <h1>Web Editor für individuelle Handyhüllen-Designs</h1>
+                <p>Geben Sie Ihren Kunden die Möglichkeit, ihre eigenen einzigartigen Designs zu erstellen. Mit unserem Editor generieren Sie neue Kundengruppen, die individuelle, hochwertige Cases gedruckt erhalten möchten.</p>
             </div>
         </section>
 
         <div class="container">
-            <section class="filters" aria-labelledby="filter-heading">
-                <h2 id="filter-heading" class="visually-hidden">Produkte filtern</h2>
-                <div class="filter-group">
-                    <label for="modelFilter">iPhone Modell:</label>
-                    <select id="modelFilter" onchange="filterProducts()">
-                        <option value="">Alle Modelle</option>
-                        <option value="iPhone 15 Pro">iPhone 15 Pro</option>
-                        <option value="iPhone 15">iPhone 15</option>
-                        <option value="iPhone 14">iPhone 14</option>
-                        <option value="iPhone 13">iPhone 13</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="materialFilter">Material:</label>
-                    <select id="materialFilter" onchange="filterProducts()">
-                        <option value="">Alle Materialien</option>
-                        <option value="Silikon">Silikon</option>
-                        <option value="Leder">Leder</option>
-                        <option value="Kunststoff">Kunststoff</option>
-                    </select>
+            <!-- Info-Box -->
+            <section class="info-highlight" role="alert" aria-live="polite">
+                <h3>💡 Geschäftsmodell für Shop-Besitzer</h3>
+                <p><strong>Neue Kundengruppe:</strong> Mit unserem Web-Editors können Ihre Kunden ihre eigenen Designs erstellen → Sie erhalten hochwertig gedruckte Cases → Ihre Kunden erhalten ihre personalisierten Produkte. So generieren Sie zusätzliche Revenue-Streams und Kundengruppen, die bisher nicht bedient wurden.</p>
+            </section>
+
+            <section class="features-preview">
+                <h2>Warum Shop-Besitzer MAKEYOURCASE lieben</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Einfacher Editor</h3>
+                        <p>Intuitive Bedienung für Ihre Kunden. Kein Design-Know-how erforderlich. Drag-and-Drop-Interface.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">👥</div>
+                        <h3>Neue Kunden</h3>
+                        <p>Erschließen Sie eine völlig neue Kundengruppe, die individualisierte Produkte möchte.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📱</div>
+                        <h3>Responsive Design</h3>
+                        <p>Funktioniert perfekt auf Desktops, Tablets und Smartphones. Modern und professionell.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🖨️</div>
+                        <h3>Premium Druck</h3>
+                        <p>Hochleistungsdrucker mit 300 DPI und UV-beständigen Farben für beste Qualität.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Technischer Support</h3>
+                        <p>Vollständiger Support für die Einrichtung Ihres Editors. Wir kümmern uns um die Technik.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💰</div>
+                        <h3>Umsatzsteigerung</h3>
+                        <p>Mehr Designvarianten = Mehr Verkäufe. Generieren Sie höhere Gewinnmargen.</p>
+                    </div>
                 </div>
             </section>
 
-            <div class="products-grid" id="productsGrid" aria-live="polite">
+            <section class="how-it-works">
+                <h2>So funktioniert's</h2>
+                <div class="workflow-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Shop-Besitzer nutzt MAKEYOURCASE</h3>
+                        <p>Sie integrieren unseren Editor in Ihren Webshop. Vollständig konfigurierbar mit Ihren Farben.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Kunde erstellt Design</h3>
+                        <p>Ihr Kunde nutzt den intuativen Editor um sein individuelles Design zu erstellen. Hochauflösung, 300 DPI.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Design wird überprüft</h3>
+                        <p>Automatische Qualitätsprüfung stellt sicher, dass das Design scharfes Drucken garantiert.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Premium-Druck</h3>
+                        <p>Professioneller Druck mit UV-beständigen Farben. Hochwertige Handyhüllen in alle Varianten.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <h3>Kunde erhält Produkt</h3>
+                        <p>Versand direkten dem Kunden. Sie generieren Umsatz und Gewinn auf jeder Case.</p>
+                    </div>
                 </div>
+            </section>
 
-            <div class="empty-state" id="emptyState" style="display: none;">
-                <div class="empty-state-icon" aria-hidden="true">🔍</div>
-                <h3>Keine Hüllen gefunden</h3>
-            </div>
+            <section class="benefits-section">
+                <h2>Für Sie als Shop-Besitzer</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>🚀 Schnelle Umsatzsteigerung</h3>
+                        <p>Neue Geschäftsprozesse, neue Kundensegmente, höhere Conversion Rates. Der Editor integriert sich nahtlos in bestehende Shops.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>🎯 Gezielte Zielgruppe</h3>
+                        <p>Kunden, die individuelle Produkte möchten, zahlen Premium-Preise. Höhere Margen als Standard-Cases.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>📊 Datengetriebene Insights</h3>
+                        <p>Sehen Sie, welche Designs beliebt sind. Bessere Entscheidungen für zukünftige Kampagnen.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>🛠️ Vollständig Verwaltbar</h3>
+                        <p>Dashboard für alle Bestellungen, Designs, Kunden. Eine zentrale Anlaufstelle für Ihr Business.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <h2>Bereit, Ihren Shop zu transformieren?</h2>
+                <p>Starten Sie noch heute mit MAKEYOURCASE und generieren Sie völlig neue Umsatzquellen.</p>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="cta-button" onclick="window.location.href='pricing.html'">Jetzt Demo anfragen</button>
+                    <button class="cta-button secondary" onclick="window.location.href='about.html'">Mehr über uns</button>
+                </div>
+            </section>
         </div>
     </main>
 
-    <div id="productModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modalTitle">Produktdetails</h2>
-                <button class="close-btn" onclick="closeModal()" aria-label="Modal schließen">&times;</button>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>MAKEYOURCASE</h3>
+                <p>Web Application Editor für Phone Case Shops. Helfe Shop-Besitzern, neue Kundengruppen zu erschließen und Umsätze zu steigern.</p>
+                <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
             </div>
-            <div class="modal-body">
-                <img id="modalImage" src="" alt="" class="modal-img-display">
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Email: info@makeyourcase.at</p>
+                <p>Support: support@makeyourcase.at</p>
+                <p>Standort: Österreich</p>
+            </div>
+            <div class="footer-section">
+                <h3>Information</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="datenschutz.html">Datenschutz</a></li>
+                    <li><a href="barrierefrei.html">Barrierefreiheit</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Technologie</h3>
+                <p>Hochleistungs-Drucker Integration. 300 DPI Hochauflösungs-Druck. UV-beständige Premium-Farben. Modern responsive Design.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MAKEYOURCASE. Die webbasierte Editor-Lösung für Handyhüllen-Shops. Verwandle Designs in Profit.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
                 <div class="modal-details">
                     <p id="modalModel" style="color: #444; font-weight: bold;"></p>
                     <p id="modalDescription"></p>
@@ -116,17 +224,35 @@
     <footer>
         <div class="footer-container">
             <div class="footer-section">
-                <h3>GetYourCases</h3>
-                <p>Premium iPhone Hüllen aus Wien.</p>
+                <h3>MAKEYOURCASE</h3>
+                <p>Premium Handyhüllen & personalisierte Cases. Dein Start-Up für individuelle Webshop-Designs.</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="select-device.html">Geräte</a></li>
+                    <li><a href="deals.html">Angebote</a></li>
+                </ul>
             </div>
             <div class="footer-section">
                 <h3>Kontakt</h3>
-                <p>Email: info@getyourcases.at</p>
-                <p>Standort: Wien, Österreich</p>
+                <p>Email: info@makeyourcase.at</p>
+                <p>Support: support@makeyourcase.at</p>
+                <p>Standort: Österreich</p>
+            </div>
+            <div class="footer-section">
+                <h3>Information</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="datenschutz.html">Datenschutz</a></li>
+                    <li><a href="barrierefrei.html">Barrierefreiheit</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Druckqualität</h3>
+                <p>300 DPI Auflösung für scharfe Drucke. UV-beständige Premium-Farben. Personalisierter Service für dein Business.</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 GetYourCases. Als österreichisches Unternehmen bieten wir freien Zugang zum österreichischen Arbeitsmarkt.</p>
+            <p>&copy; 2026 MAKEYOURCASE. Dein Start-Up für individuelle Handyhüllen im Premium-Webshop. Langweilige Cases waren gestern!</p>
         </div>
     </footer>
 

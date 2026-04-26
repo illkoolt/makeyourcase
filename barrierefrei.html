@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Barrierefreiheit - MAKEYOURCASE Website ist barrierearm und inklusiv gestaltet.">
+    <title>Barrierefreiheit - MAKEYOURCASE</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .accessibility-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .accessibility-container h1 {
+            font-size: 2.5rem;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            font-weight: 900;
+        }
+
+        .accessibility-container h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+
+        .accessibility-container h3 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .accessibility-container p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .accessibility-container ul, .accessibility-container ol {
+            color: var(--text-secondary);
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .accessibility-container li {
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .feature-card h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        .shortcut-list {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .shortcut-list p {
+            font-family: 'Courier New', monospace;
+            background: var(--bg-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin: 0.5rem 0;
+            color: var(--text-primary);
+        }
+
+        .contact-section {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--secondary);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .accessibility-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .accessibility-container h1 {
+                font-size: 1.8rem;
+            }
+
+            .accessibility-container h2 {
+                font-size: 1.2rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/images/Wort-:Bildmarke white background.png" alt="MAKEYOURCASE Logo">
+                <div class="logo-text">
+                    <h1>MAKEYOURCASE</h1>
+                    <p>Premium Design für dein Gerät</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav aria-label="Hauptnavigation">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="select-device.html">Gerät wählen</a></li>
+                <li><a href="deals.html">Angebote</a></li>
+                <li><a href="about.html">Über uns</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+                <li><a href="barrierefrei.html" class="active" aria-current="page">Barrierefreiheit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <div class="accessibility-container">
+            <h1>♿ Barrierefreiheit & Inklusion</h1>
+            <p>Diese Website ist nach den WCAG 2.2 Standards der Level AA Konformität entwickelt worden. Wir legen großen Wert darauf, dass unsere Website für alle Menschen zugänglich ist.</p>
+
+            <h2>Unsere Zugänglichkeitsfunktionen</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🎨 Design-Farbschemen</h3>
+                    <p>Vier verschiedene hochkontrast-optimierte Farbschemen zur Wahl. Anpassbar an Ihre Sehfähigkeit und Vorlieben.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔤 Responsive Schriften</h3>
+                    <p>Großzügige Schriftgrößen mit optimaler Lesbarkeit. Font-Skalierung im Browser funktioniert perfekt.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⌨️ Tastaturnavigation</h3>
+                    <p>Vollständige Navigation mit Tab-Taste möglich. Skip-Links für schnellen Sprung zum Inhalt.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔊 Screenreader-Freundlich</h3>
+                    <p>Alle Elemente sind mit aussagekräftigen ARIA-Labels versehen für vollständige Screenreader-Kompatibilität.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎯 Fokus-Indikatoren</h3>
+                    <p>Klare, deutliche Fokus-Markierungen für alle interaktiven Elemente mit hohem Kontrast.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📱 Mobile First Design</h3>
+                    <p>Optimal für alle Bildschirmgrößen, einschließlich sehr großer und sehr kleiner Displays.</p>
+                </div>
+            </div>
+
+            <h2>Tastaturkürzel</h2>
+            <div class="shortcut-list">
+                <p><strong>Tab</strong> → Durch interaktive Elemente navigieren</p>
+                <p><strong>Shift + Tab</strong> → Rückwärts navigieren</p>
+                <p><strong>Enter</strong> → Element aktivieren</p>
+                <p><strong>Leertaste</strong> → Buttons und Checkboxen aktivieren</p>
+                <p><strong>Alt + Shift + H</strong> → Zu diesem Abschnitt springen (Browser-abhängig)</p>
+            </div>
+
+            <h2>Konformität & Standards</h2>
+            <p>Diese Website erfüllt die folgenden Standards:</p>
+            <ul>
+                <li>WCAG 2.2 Level AA Konformität</li>
+                <li>HTML5 semantische Markierung</li>
+                <li>ARIA-Labels und -Rollen</li>
+                <li>Barrierefreies PDF (wo zutreffend)</li>
+                <li>Video-Untertitel (geplant)</li>
+                <li>Farbkontrast-Anforderungen übertroffen (7:1 statt erforderlich 4.5:1)</li>
+            </ul>
+
+            <h2>Browser & Hilfsmittel</h2>
+            <p>Diese Website funktioniert optimal mit:</p>
+            <ul>
+                <li><strong>Screenreader:</strong> NVDA, JAWS, VoiceOver (macOS/iOS)</li>
+                <li><strong>Browser:</strong> Chrome, Firefox, Safari, Edge (neueste Versionen)</li>
+                <li><strong>Zoomfunktionen:</strong> Browser-Zoom bis 200% unterstützt</li>
+                <li><strong>Diktat-Software:</strong> Vollständig kompatibel</li>
+            </ul>
+
+            <h2>Bekannte Einschränkungen</h2>
+            <ul>
+                <li>Eingebettete Videos benötigen Browser-Untertitel oder externe Transkripte</li>
+                <li>Externe Bilder ohne alt-Text können Informationen enthalten</li>
+                <li>Einige Grafiken könnten durch längere Textbeschreibungen ergänzt werden</li>
+            </ul>
+
+            <h2>Rückmeldungen & Verbesserungen</h2>
+            <p>Wir möchten unsere Website ständig verbessern. Falls Sie auf Zugangsbarrieren stoßen oder Verbesserungsvorschläge haben, kontaktieren Sie uns bitte:</p>
+
+            <div class="contact-section">
+                <h3>📧 Kontakt zum Accessibility-Team</h3>
+                <p><strong>Email:</strong> accessibility@makeyourcase.at</p>
+                <p><strong>Telefon:</strong> +43 (0) xxx xxxxxx</p>
+                <p><strong>Adresse:</strong> MAKEYOURCASE, Österreich</p>
+                <p>Wir antworten innerhalb von 2 Werktagen auf alle Anfragen zur Barrierefreiheit.</p>
+            </div>
+
+            <h2>Erklärung zur Barrierefreiheit</h2>
+            <p>Diese Website wurde mit dem Ziel entwickelt, inklusiv und barrierefrei zu sein. Das bedeutet:</p>
+            <ul>
+                <li>Jeder sollte die Website unabhängig von seinen Fähigkeiten nutzen können</li>
+                <li>Gleichberechtigter Zugang für Menschen mit Behinderungen</li>
+                <li>Respekt für verschiedene Technologien und Hilfsmittel</li>
+                <li>Ständige Verbesserung und Aktualisierung</li>
+            </ul>
+
+            <p style="margin-top: 3rem; font-size: 0.9rem; color: var(--text-secondary);"><em>Zuletzt aktualisiert: April 2026</em></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>MAKEYOURCASE</h3>
+                <p>Barrierefreie & inklusive Website.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Email: info@makeyourcase.at</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MAKEYOURCASE</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
