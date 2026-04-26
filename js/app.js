@@ -34,9 +34,7 @@ const products = [
 let lastFocusedElement;
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Set default color scheme to cyan-orange
-    document.documentElement.classList.add('scheme-cyan-orange');
-    
+    // Colors are set in CSS root variables
     renderProducts(products);
     
     const urlParams = new URLSearchParams(window.location.search);
