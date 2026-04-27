@@ -83,135 +83,6 @@
             font-size: 1.05rem;
         }
 
-        .features-showcase {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 3rem;
-            margin: 4rem 0;
-        }
-
-        .brand-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .brand-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .brand-image {
-            width: 100%;
-            height: 200px;
-            background: var(--bg-secondary);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            overflow: hidden;
-        }
-
-        .brand-image img {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-        }
-
-        .brand-card h2 {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .brand-card p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        .nice-classes {
-            background: var(--bg-secondary);
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid var(--primary);
-            margin-top: 1.5rem;
-        }
-
-        .nice-classes h3 {
-            font-size: 1rem;
-            color: var(--primary);
-            margin-bottom: 0.8rem;
-        }
-
-        .nice-classes ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .nice-classes li {
-            padding: 0.5rem 0;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        .nice-classes li:before {
-            content: "✓ ";
-            color: var(--primary);
-            font-weight: bold;
-            margin-right: 0.5rem;
-        }
-
-        .design-principles {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            color: white;
-            padding: 4rem 3rem;
-            border-radius: 20px;
-            margin: 4rem 0;
-        }
-
-        .design-principles h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2.5rem;
-            text-align: center;
-            font-weight: 900;
-        }
-
-        .principles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .principle {
-            background: rgba(255,255,255,0.15);
-            padding: 2rem;
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-            transition: all 0.3s ease;
-        }
-
-        .principle:hover {
-            background: rgba(255,255,255,0.25);
-            transform: translateY(-5px);
-        }
-
-        .principle h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.8rem;
-            font-weight: 700;
-        }
-
-        .principle p {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            opacity: 0.95;
-        }
-
         .vision-section {
             background: var(--bg-secondary);
             padding: 3rem;
@@ -231,6 +102,94 @@
             color: var(--text-secondary);
             line-height: 1.8;
             font-size: 1.05rem;
+        }
+
+        .brands-showcase {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+
+        .brand-card {
+            background: var(--bg-primary);
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .brand-image {
+            width: 100%;
+            height: 200px;
+            background: var(--bg-primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .brand-image img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .brand-card h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .brand-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .nice-classes {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+            margin-top: 1.5rem;
+        }
+
+        .nice-classes h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .nice-classes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nice-classes li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .nice-classes li:before {
+            content: "✓ ";
+            color: var(--primary);
+            font-weight: bold;
+            margin-right: 0.5rem;
         }
 
         .cta-final {
@@ -259,19 +218,11 @@
                 font-size: 2rem;
             }
 
-            .design-principles {
-                padding: 2rem;
-            }
-
-            .design-principles h2 {
-                font-size: 1.8rem;
-            }
-
             .mission-vision {
                 grid-template-columns: 1fr;
             }
 
-            .features-showcase {
+            .brands-showcase {
                 grid-template-columns: 1fr;
             }
         }
@@ -341,7 +292,7 @@
                         <img src="assets/images/logo text.png" alt="MAKEYOURCASE Wortmarke">
                     </div>
                     <h2>Marke 1: Wortmarke</h2>
-                    <p>Die Wortmarke „MAKEYOURCASE“ steht für die digitale, webbasierte Editor-Lösung. Sie ist als reine Textmarke gestaltet und eignet sich vor allem für Produktnamen, Headlines und rechtliche Eintragungen.</p>
+                    <p>Die Wortmarke „MAKEYOURCASE" steht für die digitale, webbasierte Editor-Lösung. Sie ist als reine Textmarke gestaltet und eignet sich vor allem für Produktnamen, Headlines und rechtliche Eintragungen.</p>
                     <div class="nice-classes">
                         <h3>Nizza-Klassen</h3>
                         <ul>
@@ -420,728 +371,6 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 MAKEYOURCASE. Die webbasierte Editor-Lösung für Handyhüllen-Shops.</p>
-        </div>
-    </footer>
-
-    <script src="js/app.js"></script>
-</body>
-</html>
-        .about-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .about-intro {
-            text-align: center;
-            margin-bottom: 4rem;
-            animation: fadeIn 0.6s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .about-intro h1 {
-            font-size: 3rem;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-            font-weight: 900;
-            letter-spacing: -1px;
-        }
-
-        .about-intro h2 {
-            font-size: 1.4rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .about-intro p {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-
-        .brands-showcase {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 3rem;
-            margin: 4rem 0;
-        }
-
-        .brand-card {
-            background: var(--bg-primary);
-            border-radius: 15px;
-            padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .brand-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--primary);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-        .brand-image {
-            width: 100%;
-            height: 200px;
-            background: var(--bg-secondary);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            overflow: hidden;
-        }
-
-        .brand-image img {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-        }
-
-        .brand-card h2 {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-weight: 800;
-        }
-
-        .brand-card p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        .nice-classes {
-            background: var(--bg-secondary);
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid var(--primary);
-            margin-top: 1.5rem;
-        }
-
-        .nice-classes h3 {
-            font-size: 1.1rem;
-            color: var(--primary);
-            margin-bottom: 0.8rem;
-            font-weight: 700;
-        }
-
-        .nice-classes ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .nice-classes li {
-            padding: 0.5rem 0;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        .nice-classes li:before {
-            content: "✓ ";
-            color: var(--primary);
-            font-weight: bold;
-            margin-right: 0.5rem;
-        }
-
-        .design-principles {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            color: white;
-            padding: 4rem 3rem;
-            border-radius: 20px;
-            margin: 4rem 0;
-        }
-
-        .design-principles h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2.5rem;
-            text-align: center;
-            font-weight: 900;
-        }
-
-        .principles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .principle {
-            background: rgba(255,255,255,0.15);
-            padding: 2rem;
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-            transition: all 0.3s ease;
-        }
-
-        .principle:hover {
-            background: rgba(255,255,255,0.25);
-            transform: translateY(-5px);
-        }
-
-        .principle h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.8rem;
-            font-weight: 700;
-        }
-
-        .principle p {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            opacity: 0.95;
-        }
-
-        .vision-section {
-            background: var(--bg-secondary);
-            padding: 3rem;
-            border-radius: 15px;
-            margin: 3rem 0;
-            border-left: 5px solid var(--secondary);
-        }
-
-        .vision-section h3 {
-            font-size: 1.5rem;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-            font-weight: 800;
-        }
-
-        .vision-section p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            font-size: 1.05rem;
-        }
-
-        @media (max-width: 768px) {
-            .about-intro h1 {
-                font-size: 2rem;
-            }
-
-            .design-principles {
-                padding: 2rem;
-            }
-
-            .design-principles h2 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
-
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="assets/images/Wort-:Bildmarke white background.png" alt="MAKEYOURCASE Logo">
-                <div class="logo-text">
-                    <h1>MAKEYOURCASE</h1>
-                    <p>Premium Design für dein Gerät</p>
-                </div>
-            </div>
-            
-            <div class="search-bar" role="search">
-                <label for="searchInput" class="visually-hidden">Hüllen suchen</label>
-                <input type="text" id="searchInput" placeholder="Suche nach Hüllen...">
-                <button onclick="searchProducts()" aria-label="Suche starten">Suchen</button>
-            </div>
-        </div>
-    </header>
-
-    <nav aria-label="Hauptnavigation">
-        <div class="nav-container">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="select-device.html">Gerät wählen</a></li>
-                <li><a href="deals.html">Angebote</a></li>
-                <li><a href="about.html" class="active" aria-current="page">Über uns</a></li>
-                <li><a href="datenschutz.html">Datenschutz</a></li>
-                <li><a href="barrierefrei.html">Barrierefreiheit</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main id="main-content">
-        <section class="about-section">
-            <div class="about-intro">
-                <h1>Über MAKEYOURCASE</h1>
-                <h2>Sie sind der Eigentümer eines Start-Ups und vertreiben Software über einen Webshop im Internet.</h2>
-                <p>MAKEYOURCASE ist ein innovatives Start-Up, das hochwertige, personalisierte Handyhüllen mit Premium-Druckqualität anbietet. Wir kombinieren modernes Design mit handwerklicher Qualität – langweilige Cases waren gestern!</p>
-            </div>
-
-            <div class="vision-section">
-                <h3>📱 Unsere Vision</h3>
-                <p>Wir revolutionieren den Markt für Handyhüllen durch individuelle Personalisierung und erstklassige Druckqualität. Jede Case ist ein Kunstwerk – mit 300 DPI Auflösung, UV-beständigen Farben und perfektem Sitz für dein Gerät.</p>
-            </div>
-
-            <div class="design-principles">
-                <h2>Unsere Design-Philosophie</h2>
-                <div class="principles-grid">
-                    <div class="principle">
-                        <h3>🎨 Kreativität</h3>
-                        <p>Unbegrenzte Designmöglichkeiten für deine persönlichen Ideen. Wir setzen deine Vision perfekt um.</p>
-                    </div>
-                    <div class="principle">
-                        <h3>🔒 Qualität</h3>
-                        <p>Premium-Materialien und Hochleistungsdrucker für fehlerfreie Ergebnisse. Deine Case sieht scharf und lebendig aus.</p>
-                    </div>
-                    <div class="principle">
-                        <h3>📱 Kompatibilität</h3>
-                        <p>Alle modernen Geräte. Perfekter Sitz und vollständiger Schutz für iPhone, Samsung und mehr.</p>
-                    </div>
-                    <div class="principle">
-                        <h3>⚡ Innovation</h3>
-                        <p>Moderne Farb-Designs und responsive Webshop-Technologie für dein Business.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="brands-showcase">
-                <div class="brand-card">
-                    <div class="brand-image">
-                        <img src="assets/images/clear case.jpg" alt="Crystal Clear Case">
-                    </div>
-                    <h2>Crystal Clear Cases</h2>
-                    <p>Transparente Hüllen, die die Originalfarbe deines Geräts zeigen. Mit vergilbungsfreiem Material und Extra-Grip.</p>
-                    <div class="nice-classes">
-                        <h3>Eigenschaften</h3>
-                        <ul>
-                            <li>Ultradünn & leicht</li>
-                            <li>Vergilbungsfrei</li>
-                            <li>Militärischer Schutz</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="brand-card">
-                    <div class="brand-image">
-                        <img src="assets/images/leather.jpg" alt="Premium Leather Edition">
-                    </div>
-                    <h2>Leather Collection</h2>
-                    <p>Echtes Leder für ein luxuriöses Gefühl. Perfekt für Business und Alltag.</p>
-                    <div class="nice-classes">
-                        <h3>Eigenschaften</h3>
-                        <ul>
-                            <li>Echtes Premium-Leder</li>
-                            <li>Mikrofaser-Innenfutter</li>
-                            <li>Edle Patina</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="brand-card">
-                    <div class="brand-image">
-                        <img src="assets/images/clear magsafe.jpg" alt="MagSafe Armor Case">
-                    </div>
-                    <h2>MagSafe Collection</h2>
-                    <p>Integrierte Magnete für perfektes kabelloses Laden. Stoßfest und kratzfest.</p>
-                    <div class="nice-classes">
-                        <h3>Eigenschaften</h3>
-                        <ul>
-                            <li>MagSafe optimiert</li>
-                            <li>Stoß & Kratzfest</li>
-                            <li>Modernes Design</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="vision-section">
-                <h3>🚀 Für dein Start-Up</h3>
-                <p>Nutze MAKEYOURCASE als Vorlage für dein eigenes Business. Vollständig konfigurierbar, mit modernem Webshop, responsive Design, individuellen Farbschemen und Premium-Druckqualität. Dein Start-Up verdient mehr als langweilige Templates – bei uns bekommst du Qualität auf Augenhöhe.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>MAKEYOURCASE</h3>
-                <p>Premium Handyhüllen & personalisierte Cases. Dein Start-Up für individuelle Webshop-Designs.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Kontakt</h3>
-                <p>Email: info@makeyourcase.at</p>
-                <p>Support: support@makeyourcase.at</p>
-            </div>
-            <div class="footer-section">
-                <h3>Informationen</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="datenschutz.html">Datenschutz</a></li>
-                    <li><a href="barrierefrei.html">Barrierefreiheit</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 MAKEYOURCASE. Langweilige Cases waren gestern!</p>
-        </div>
-    </footer>
-
-    <script src="js/app.js"></script>
-</body>
-</html>
-        .about-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-
-        .about-intro {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .about-intro h1 {
-            font-size: 2.8rem;
-            color: #222;
-            margin-bottom: 1rem;
-        }
-
-        .about-intro p {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .brands-showcase {
-            display: flex;
-            gap: 1.5rem;
-            margin: 4rem 0;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: stretch;
-        }
-
-        .brand-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            flex: 1 1 calc(33.333% - 1rem);
-            min-width: 280px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .brand-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 24px rgba(0,0,0,0.12);
-        }
-
-        .brand-image {
-            width: 100%;
-            height: 200px;
-            background: white;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            overflow: hidden;
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .brand-image img {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-        }
-
-        .brand-card h2 {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .brand-card p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            flex: 1;
-        }
-
-        .nice-classes {
-            background: #f8fafc;
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
-            margin-top: 1.5rem;
-        }
-
-        .nice-classes h3 {
-            font-size: 1rem;
-            color: #667eea;
-            margin-bottom: 0.8rem;
-        }
-
-        .nice-classes ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .nice-classes li {
-            padding: 0.5rem 0;
-            color: #555;
-            font-size: 0.95rem;
-        }
-
-        .nice-classes li:before {
-            content: "✓ ";
-            color: #667eea;
-            font-weight: bold;
-            margin-right: 0.5rem;
-        }
-
-        .design-principles {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 3rem;
-            border-radius: 15px;
-            margin: 4rem 0;
-        }
-
-        .design-principles h2 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .principles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .principle {
-            background: rgba(255,255,255,0.1);
-            padding: 1.5rem;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-        }
-
-        .principle h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .principle p {
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .color-palette {
-            margin: 4rem 0;
-        }
-
-        .color-palette h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: #222;
-        }
-
-        .colors {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-
-        .color-box {
-            text-align: center;
-        }
-
-        .color-sample {
-            width: 100%;
-            height: 150px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-            margin-bottom: 1rem;
-        }
-
-        .color-info {
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        .color-name {
-            font-weight: 600;
-            color: #222;
-            margin-bottom: 0.5rem;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="assets/images/logo text.png" alt="GetYourCase Logo">
-            </div>
-            
-            <div class="search-bar" role="search">
-                <label for="searchInput" class="visually-hidden">Hüllen suchen</label>
-                <input type="text" id="searchInput" placeholder="Suche nach iPhone Hüllen...">
-                <button onclick="searchProducts()" aria-label="Suche starten">Suchen</button>
-            </div>
-        </div>
-    </header>
-
-    <nav aria-label="Hauptnavigation">
-        <div class="nav-container">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="select-device.html">Gerät wählen</a></li>
-                <li><a href="deals.html">Angebote</a></li>
-                <li><a href="about.html" class="active" aria-current="page">Über uns</a></li>
-                <li><a href="datenschutz.html">Datenschutz</a></li>
-                <li><a href="barrierefrei.html">Barrierefreiheit</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main>
-        <div class="about-section">
-            <div class="about-intro">
-                <h1>Über GetYourCase</h1>
-                <p>GetYourCase ist eine österreichische Marke für Premium-Smartphone-Hüllen und Zubehör. Wir verbinden funktionalen Schutz mit kreativer Individualisierung und modernem Design.</p>
-            </div>
-
-            <div class="design-principles">
-                <h2>Unsere Designprinzipien</h2>
-                <div class="principles-grid">
-                    <div class="principle">
-                        <h3>Fokus</h3>
-                        <p>Wir konzentrieren uns auf minimalistische und moderne Ästhetik, die Technologie zugänglich macht.</p>
-                    </div>
-                    <div class="principle">
-                        <h3>Schutz</h3>
-                        <p>Funktionaler Schutz ist unsere Priorität, ohne dabei auf Stilbewusstsein zu verzichten.</p>
-                    </div>
-                    <div class="principle">
-                        <h3>Kreativität</h3>
-                        <p>Personalisierung und Individualisierung stehen im Mittelpunkt unserer Produktentwicklung.</p>
-                    </div>
-                    <div class="principle">
-                        <h3>♿ Barrierefreiheit</h3>
-                        <p>Wir schaffen inklusive Produkte, die allen zugänglich sind, unabhängig von ihren Fähigkeiten.</p>
-                    </div>
-                </div>
-            </div>
-
-            <h2 style="text-align: center; font-size: 2rem; margin: 4rem 0 2rem 0; color: #222;">Unsere Markenformen</h2>
-
-            <div class="brands-showcase">
-                <div class="brand-card">
-                    <div class="brand-image">
-                        <img src="assets/images/logo text.png" alt="Wortmarke">
-                    </div>
-                    <h2>Wortmarke</h2>
-                    <p>Die klassische Wortmarke "GetYourCase" in moderner Schrift. Diese Form betont unseren Markennamen und die Kernbotschaft: Finde deine perfekte Hülle.</p>
-                    <div class="nice-classes">
-                        <h3>Nizza-Klassen:</h3>
-                        <ul>
-                            <li>Klasse 18 - Taschen, Koffer, Hüllen</li>
-                            <li>Klasse 25 - Kleidung (für potenzielle Erweiterungen)</li>
-                        </ul>
-                    </div>
-                    <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #999;"><strong>Schriftart:</strong> Modern, geometrisch | <strong>Farbe:</strong> Schwarz, optional Blau-Gradient</p>
-                </div>
-
-                <div class="brand-card">
-                    <div class="brand-image">
-                        <img src="assets/images/Wort-:Bildmarke white background.png" alt="Wort-/Bildmarke">
-                    </div>
-                    <h2>Wort-/Bildmarke</h2>
-                    <p>Die Kombination aus Icon (Smartphone) und Textmarke. Das Smartphone-Symbol mit integriertem Schriftzug symbolisiert unsere Kernkompetenz: Smartphone-Schutz mit Persönlichkeit.</p>
-                    <div class="nice-classes">
-                        <h3>Nizza-Klassen:</h3>
-                        <ul>
-                            <li>Klasse 18 - Taschen, Koffer, Hüllen</li>
-                            <li>Klasse 9 - Smartphones und Zubehör</li>
-                            <li>Klasse 35 - Werbung und Geschäftsverwaltung</li>
-                        </ul>
-                    </div>
-                    <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #999;"><strong>Icon:</strong> Smartphone | <strong>Stil:</strong> Minimalistisch, modern</p>
-                </div>
-
-                <div class="brand-card">
-                  <div class="brand-image">
-                          <img src="assets/images/logo white background.png" alt="Wort-/Bildmarke">
-                      </div>
-                    <h2>Bildmarke (Icon)</h2>
-                    <p>Ein eigenständiges Icon-System mit dem Smartphone-Symbol in vielen Varianten. Dies ermöglicht flexible Anwendungen in sozialen Medien, Apps und Werbematerialien.</p>
-                    <div class="nice-classes">
-                        <h3>Nizza-Klassen:</h3>
-                        <ul>
-                            <li>Klasse 18 - Taschen, Koffer, Hüllen</li>
-                            <li>Klasse 41 - Bildung und Unterhaltung</li>
-                            <li>Klasse 42 - IT-Dienste und Beratung</li>
-                        </ul>
-                    </div>
-                    <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #999;"><strong>Farben:</strong> Gradient oder einfarbig | <strong>Einsatz:</strong> Digital, Social Media, Apps</p>
-                </div>
-            </div>
-
-            <div class="color-palette">
-                <h2>Farbpalette</h2>
-                <div class="colors">
-                    <div class="color-box">
-                        <div class="color-sample" style="background: #50a7ff;"></div>
-                        <div class="color-name">Primär Indigo</div>
-                        <div class="color-info">#6366f1</div>
-                    </div>
-                    <div class="color-box">
-                        <div class="color-sample" style="background: #a9a9a9;"></div>
-                        <div class="color-name">Akzent Violett</div>
-                        <div class="color-info">#8b5cf6</div>
-                    </div>
-                    <div class="color-box">
-                        <div class="color-sample" style="background: #141414;"></div>
-                        <div class="color-name">Sekundär Rot</div>
-                        <div class="color-info">#f43f5e</div>
-                    </div>
-                </div>
-            </div>
-
-            <div style="background: #f8fafc; padding: 3rem; border-radius: 15px; margin: 4rem 0;">
-                <h2 style="font-size: 1.8rem; color: #222; margin-bottom: 1.5rem;">Markenrichtlinien & Markenschutz</h2>
-                <ul style="list-style: none; padding: 0; color: #555; line-height: 2;">
-                    <li><strong>✓ Wortwahl:</strong> "GetYourCase" - Eine prägnante, eingängige Kombination, die nicht mit bestehenden Marken konkurriert. Das Wort "Case" (Hülle) ist beschreibend, "GetYour" betont Personalisierung.</li>
-                    <li><strong>✓ Bildwahl:</strong> Das Smartphone-Icon ist abstrakt und nicht fotografisch, um Verwechslungen mit konkurrierenden Marken zu vermeiden. Es ist modern und zeitlos.</li>
-                    <li><strong>✓ Farbwahl:</strong> Unser Gradient (Indigo zu Violett) ist einzigartig und unterscheidbar von Konkurrenten. Diese Farbkombination ist weniger häufig in der Smartphone-Hüllen-Industrie.</li>
-                    <li><strong>✓ Positionswahl:</strong> Wir positionieren uns im Premium-Segment mit Fokus auf Individualisierung und Barrierefreiheit.</li>
-                    <li><strong>✓ Formwahl:</strong> Minimalistisches Design, geometrische Formen und moderne Ästhetik unterscheiden uns vom klassischen Ansatz anderer Hersteller.</li>
-                    <li><strong>✓ Eigentümerschaft:</strong> Alle Markenformen sind ursprüngliche Kreationen des Unternehmens GetYourCase GmbH und werden durch österreichische und europäische Markengesetze geschützt.</li>
-                </ul>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>GetYourCase</h3>
-                <p>Premium iPhone Hüllen aus Wien.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Kontakt</h3>
-                <p>Email: info@getyourcase.at</p>
-                <p>Standort: Wien, Österreich</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 GetYourCase. Als österreichisches Unternehmen bieten wir freien Zugang zum österreichischen Arbeitsmarkt.</p>
         </div>
     </footer>
 
