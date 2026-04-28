@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontakt - MAKEYOURCASE. Wir freuen uns auf Ihre Nachricht!">
+    <title>Kontakt - MAKEYOURCASE</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .contact-header h1 {
+            font-size: 2.8rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 900;
+        }
+
+        .contact-header p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .contact-info {
+            background: var(--bg-secondary);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-info h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .contact-info p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-details {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--bg-primary);
+        }
+
+        .contact-detail-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-detail-label {
+            font-weight: 700;
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-detail-value {
+            color: var(--text-secondary);
+        }
+
+        .contact-form-section {
+            background: var(--bg-secondary);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-form-section h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-weight: 800;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--bg-primary);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-group.required label::after {
+            content: " *";
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .form-actions button,
+        .form-actions a {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
+        }
+
+        .btn-reset {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-reset:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .form-message {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            display: none;
+        }
+
+        .form-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+
+        .form-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+
+        .response-types {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .response-type {
+            display: flex;
+            align-items: center;
+        }
+
+        .response-type input[type="radio"] {
+            width: auto;
+            margin-right: 0.5rem;
+            cursor: pointer;
+        }
+
+        .response-type label {
+            margin-bottom: 0;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-header h1 {
+                font-size: 2rem;
+            }
+
+            .response-types {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/images/Wort-:Bildmarke white background.png" alt="MAKEYOURCASE Logo">
+                <div class="logo-text">
+                    <h1>MAKEYOURCASE</h1>
+                    <p>Web Editor für Phone Case Shops</p>
+                </div>
+            </div>
+            
+            <div class="search-bar" role="search">
+                <label for="searchInput" class="visually-hidden">Suche</label>
+                <input type="text" id="searchInput" placeholder="Finde Lösungen für deinen Shop...">
+                <button onclick="searchProducts()" aria-label="Suche starten">Suchen</button>
+            </div>
+        </div>
+    </header>
+
+    <nav aria-label="Hauptnavigation">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">Über uns</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+                <li><a href="barrierefrei.html">Barrierefreiheit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="hero-banner">
+            <div class="hero-content">
+                <h1>Kontaktieren Sie uns</h1>
+                <p>Wir freuen uns auf Ihre Fragen und Anregungen!</p>
+            </div>
+        </section>
+
+        <div class="contact-container">
+            <section class="contact-header">
+                <h2 style="font-size: 1.8rem; color: var(--text-primary); margin-bottom: 1rem;">Wie können wir Ihnen helfen?</h2>
+                <p>Erreichen Sie unser Team über die angegebenen Kanäle oder füllen Sie das Kontaktformular aus. Wir antworten innerhalb von 24 Stunden.</p>
+            </section>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>📞 Kontaktdaten</h2>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <span class="contact-detail-label">Email (Allgemein):</span>
+                            <span class="contact-detail-value"><a href="mailto:info@makeyourcase.at">info@makeyourcase.at</a></span>
+                        </div>
+                        
+                        <div class="contact-detail-item">
+                            <span class="contact-detail-label">Email (Support):</span>
+                            <span class="contact-detail-value"><a href="mailto:support@makeyourcase.at">support@makeyourcase.at</a></span>
+                        </div>
+                        
+                        <div class="contact-detail-item">
+                            <span class="contact-detail-label">Email (Rechtlich):</span>
+                            <span class="contact-detail-value"><a href="mailto:legal@makeyourcase.at">legal@makeyourcase.at</a></span>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <span class="contact-detail-label">Standort:</span>
+                            <span class="contact-detail-value">Wien, Österreich</span>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <span class="contact-detail-label">Geschäftszeiten:</span>
+                            <span class="contact-detail-value">
+                                Montag – Freitag: 09:00 – 18:00 Uhr (MEZ)<br>
+                                Samstag & Sonntag: Geschlossen
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="contact-details">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">🤝 Alternative Kontaktmöglichkeiten</h3>
+                        <p>Schnelle Anfragen? Nutzen Sie unser Kontaktformular auf der rechten Seite.</p>
+                        <p><strong>Telefonischer Support:</strong> Nach Anfrage per Email</p>
+                    </div>
+                </div>
+
+                <div class="contact-form-section">
+                    <h2>📝 Kontaktformular</h2>
+                    
+                    <div id="formMessage" class="form-message"></div>
+
+                    <form id="contactForm" name="contact-form" method="POST" action="#">
+                        <div class="form-group required">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Ihr vollständiger Name">
+                        </div>
+
+                        <div class="form-group required">
+                            <label for="email">Email-Adresse</label>
+                            <input type="email" id="email" name="email" required placeholder="ihre.email@beispiel.de">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefonnummer (optional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+43 (0)...">
+                        </div>
+
+                        <div class="form-group required">
+                            <label for="subject">Betreff</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">-- Bitte wählen --</option>
+                                <option value="inquiry">Allgemeine Anfrage</option>
+                                <option value="support">Technischer Support</option>
+                                <option value="demo">Demo anfragen</option>
+                                <option value="partnership">Geschäftspartnerschaft</option>
+                                <option value="complaint">Beschwerde</option>
+                                <option value="other">Sonstiges</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Bevorzugte Antwortart:</label>
+                            <div class="response-types">
+                                <div class="response-type">
+                                    <input type="radio" id="response-email" name="response-type" value="email" checked>
+                                    <label for="response-email">Email</label>
+                                </div>
+                                <div class="response-type">
+                                    <input type="radio" id="response-phone" name="response-type" value="phone">
+                                    <label for="response-phone">Telefon</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group required">
+                            <label for="message">Nachricht</label>
+                            <textarea id="message" name="message" required placeholder="Teilen Sie uns Ihre Frage oder Anregung mit..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="checkbox" id="privacy-consent" name="privacy-consent" required>
+                            <label for="privacy-consent" style="display: inline; margin-left: 0.5rem;">
+                                Ich akzeptiere die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> und bin damit einverstanden, dass meine Daten zur Bearbeitung meiner Anfrage verwendet werden.
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-submit">Nachricht senden</button>
+                            <button type="reset" class="btn-reset">Zurücksetzen</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <section style="background: var(--bg-secondary); padding: 2rem; border-radius: 12px; margin-top: 3rem;">
+                <h2 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem;">❓ Häufig gestellte Fragen</h2>
+                <p><strong>Wie lange dauert es, bis ich eine Antwort erhalte?</strong><br>
+                Wir beantworten Anfragen innerhalb von 24 Stunden (Geschäftstage).</p>
+                
+                <p style="margin-top: 1rem;"><strong>Werden meine Daten weitergegeben?</strong><br>
+                Nein, Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.</p>
+
+                <p style="margin-top: 1rem;"><strong>Kann ich auch anrufen?</strong><br>
+                Nach einer Email-Anfrage können wir Sie telefonisch kontaktieren, falls Sie dies wünschen.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>MAKEYOURCASE</h3>
+                <p>Web Application Editor für Phone Case Shops. Helfe Shop-Besitzern, neue Kundengruppen zu erschließen und Umsätze zu steigern.</p>
+                <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Email: info@makeyourcase.at</p>
+                <p>Support: support@makeyourcase.at</p>
+                <p>Standort: Österreich</p>
+            </div>
+            <div class="footer-section">
+                <h3>Information</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="impressum.html">Impressum</a></li>
+                    <li><a href="datenschutz.html">Datenschutz</a></li>
+                    <li><a href="barrierefrei.html">Barrierefreiheit</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="lizenzen.html">Credits & Lizenzen</a></li>
+                    <li><a href="lizenzvereinbarung.html">Lizenzvereinbarung</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Technologie</h3>
+                <p>Hochleistungs-Drucker Integration. 300 DPI Hochauflösungs-Druck. UV-beständige Premium-Farben. Modern responsive Design.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MAKEYOURCASE. Die webbasierte Editor-Lösung für Handyhüllen-Shops. Verwandle Designs in Profit.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Einfache Form-Validierung und Verarbeitung
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formMessage = document.getElementById('formMessage');
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            const consent = document.getElementById('privacy-consent').checked;
+            
+            if (!consent) {
+                formMessage.textContent = 'Bitte akzeptieren Sie die Datenschutzerklärung.';
+                formMessage.className = 'form-message error';
+                return;
+            }
+            
+            // Hier würde eine Backend-Integration stattfinden
+            // Für Demo-Zwecke zeigen wir eine Erfolgsmeldung
+            formMessage.textContent = `Vielen Dank, ${name}! Ihre Nachricht wurde empfangen. Wir antworten innerhalb von 24 Stunden.`;
+            formMessage.className = 'form-message success';
+            
+            // Formular zurücksetzen
+            setTimeout(() => {
+                document.getElementById('contactForm').reset();
+                formMessage.className = 'form-message';
+            }, 3000);
+        });
+    </script>
+    <script src="js/app.js"></script>
+</body>
+</html>
