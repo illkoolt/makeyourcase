@@ -236,13 +236,14 @@ nav {
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 .nav-links {
     display: flex;
     gap: 2.5rem;
+    justify-content: center;
     list-style: none;
     padding: 1rem 0;
     flex: 1;
@@ -1102,7 +1103,7 @@ footer {
 /* Hero & Gradient */
 .hero-banner {
     height: 60vh;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/images/6 cases different colors.jpg');
+    background: linear-gradient(rgba(0,0,0,0.3),#2596be), url('../assets/images/6 cases different colors.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -1132,7 +1133,7 @@ footer {
     width: 100%;
     height: 40vh; /* Höhe des Banners (70% des Bildschirms) */
     overflow: hidden;
-    background: linear-gradient(135deg, white 20%, #c51010 100%); /* Fallback-Gradient */
+    background: linear-gradient(135deg, #2596be 20%, #c51010 100%); /* Fallback-Gradient */
     display: flex;
     align-items: center;
     justify-content: center;

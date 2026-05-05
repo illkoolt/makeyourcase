@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Barrierefreiheit - MAKEYOURCASE Website ist barrierearm und inklusiv gestaltet.">
+    <meta name="description" content="Barrierefreiheitserklärung gemäß Web-Zugänglichkeits-Gesetz (WZG) für MAKEYOURCASE.">
     <title>Barrierefreiheit - MAKEYOURCASE</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
@@ -55,53 +55,52 @@
             margin-bottom: 0.5rem;
         }
 
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .feature-card {
+        .info-box {
             background: var(--bg-secondary);
             border-left: 4px solid var(--primary);
             padding: 1.5rem;
+            margin: 2rem 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
         }
 
-        .feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        }
-
-        .feature-card h3 {
-            color: var(--primary);
-            margin-top: 0;
-        }
-
-        .shortcut-list {
-            background: var(--bg-secondary);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-        }
-
-        .shortcut-list p {
-            font-family: 'Courier New', monospace;
-            background: var(--bg-primary);
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            margin: 0.5rem 0;
+        .info-box strong {
             color: var(--text-primary);
         }
 
         .contact-section {
-            background: var(--bg-secondary);
-            border-left: 4px solid var(--secondary);
+            background: var(--bg-primary);
+            border: 2px solid var(--primary);
             padding: 2rem;
-            border-radius: 8px;
+            border-radius: 12px;
             margin-top: 2rem;
+        }
+
+        /* Skip-Link Accessibility Fix */
+        .skip-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            z-index: 1000;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .skip-link:focus {
+            transform: translateY(0);
+        }
+
+        /* Logo Title Fix (ersetzt h1 im Header zur Wahrung der Semantik) */
+        .logo-title {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 0.2rem;
         }
 
         @media (max-width: 768px) {
@@ -116,10 +115,6 @@
             .accessibility-container h2 {
                 font-size: 1.2rem;
             }
-
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -129,9 +124,9 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="assets/images/Wort-:Bildmarke white background.png" alt="MAKEYOURCASE Logo">
+                <img src="assets/images/logo text.png" alt="MAKEYOURCASE Logo">
                 <div class="logo-text">
-                    <h1>MAKEYOURCASE</h1>
+                    <span class="logo-title">MAKEYOURCASE</span>
                     <p>Web Editor für Phone Case Shops</p>
                 </div>
             </div>
@@ -145,62 +140,56 @@
                 <li><a href="features.html">Features</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="about.html">Über uns</a></li>
-                <li><a href="datenschutz.html">Datenschutz</a></li>
-                <li><a href="barrierefrei.html" class="active" aria-current="page">Barrierefreiheit</a></li>
+                <!-- <li><a href="datenschutz.html">Datenschutz</a></li>
+                <li><a href="barrierefrei.html" class="active" aria-current="page">Barrierefreiheit</a></li> -->
             </ul>
         </div>
     </nav>
 
     <main id="main-content">
         <div class="accessibility-container">
-            <h1>Barrierefreiheit und Inklusion</h1>
-            <p>Diese Website ist für die Nutzung durch alle Besucher ausgelegt. Sie erfüllt die Anforderungen der WCAG 2.2 auf Level AA und ist visuell konsistent gestaltet mit einem klaren Farbschema, gut lesbarer Typografie und einem strukturierten Layout.</p>
+            <h1>Erklärung zur Barrierefreiheit</h1>
+            
+            <p>Die MAKEYOURCASE GmbH ist bemüht, ihre Website im Einklang mit dem Web-Zugänglichkeits-Gesetz (WZG) idgF zur Umsetzung der Richtlinie (EU) 2016/2102 des Europäischen Parlaments und des Rates barrierefrei zugänglich zu machen.</p>
+            <p>Diese Erklärung zur Barrierefreiheit gilt für die Website <strong>https://makeyourcase.ilya-kolotnitskyi.workers.dev/</strong>.</p>
 
-            <h2>Barrierefreiheitserklärung</h2>
-            <p>MAKEYOURCASE verpflichtet sich, digitale Barrieren zu vermeiden. Unser Ziel ist es, dass Menschen mit verschiedenen Fähigkeiten die Website gleichberechtigt nutzen können. Wir arbeiten laufend daran, Inhalte und Funktionen weiter zu verbessern.</p>
-
-            <h2>Warum WCAG 2.2 AA?</h2>
-            <p>WCAG 2.2 AA ist ein anerkanntes Qualitätsniveau für Web-Zugänglichkeit. Es stellt sicher, dass Inhalte, Navigation und Interaktion für eine breite Nutzergruppe zugänglich sind, inklusive Menschen mit Sehbeeinträchtigungen, motorischen Einschränkungen oder kognitiven Herausforderungen.</p>
-
-            <h2>Unsere wichtigsten Maßnahmen</h2>
-            <ul>
-                <li>Semantischer HTML-Aufbau mit klaren Überschriften und Abschnitten</li>
-                <li>Deutliche Kontraste zwischen Text und Hintergrund</li>
-                <li>Fokus-Indikatoren für alle interaktiven Elemente</li>
-                <li>Skip-Link für schnellen Zugriff auf den Hauptinhalt</li>
-                <li>Tab-navigierbare Benutzeroberfläche</li>
-                <li>Alt-Texte für Bilder und klare Linktexte</li>
-            </ul>
-
-            <h2>Design und Konsistenz</h2>
-            <p>Unsere Website verwendet ein einheitliches Farbschema mit Weiß, Rot und Blau sowie ein sauberes Layout. Schriftgrößen und Abstände sind so gewählt, dass Texte leicht lesbar bleiben und die Seite visuell ansprechend wirkt.</p>
-
-            <h2>Unterstützte Geräte und Browser</h2>
-            <p>Die Website läuft zuverlässig in allen modernen Browsern und ist kompatibel mit Desktop, Tablet und mobilen Geräten. Sie funktioniert auch in Kombination mit gängigen Webshops und Webseiten.</p>
-            <ul>
-                <li>Chrome</li>
-                <li>Firefox</li>
-                <li>Safari</li>
-                <li>Edge</li>
-            </ul>
-
-            <h2>Tests und Werkzeuge</h2>
-            <p>Wir nutzen gängige Prüfwerkzeuge wie WAVE und AXE DevTools, um die Einhaltung der Barrierefreiheitsregeln zu überprüfen und Schwachstellen systematisch zu beheben.</p>
-
-            <h2>Feedback und Kontakt</h2>
-            <p>Falls Sie Probleme bei der Nutzung der Website feststellen, freuen wir uns über Ihre Rückmeldung. Wir prüfen alle Hinweise und verbessern die Seite kontinuierlich.</p>
-
-            <div class="contact-section">
-                <h3>Kontakt zur Barrierefreiheit</h3>
-                <p><strong>Email:</strong> accessibility@makeyourcase.at</p>
-                <p><strong>Telefon:</strong> +43 123 456 789</p>
+            <h2>Stand der Vereinbarkeit mit den Anforderungen</h2>
+            <div class="info-box">
+                <p>Diese Website ist mit der Konformitätsstufe AA der „Richtlinien für barrierefreie Webinhalte – WCAG 2.2“ sowie dem geltenden Europäischen Standard EN 301 549 V3.2.1 vollständig vereinbar.</p>
             </div>
 
-            <p style="margin-top: 3rem; font-size: 0.9rem; color: var(--text-secondary);">Zuletzt aktualisiert: April 2026</p>
+            <h2>Erstellung dieser Erklärung zur Barrierefreiheit</h2>
+            <p>Diese Erklärung wurde am 05. Mai 2026 erstellt.</p>
+            <p>Die Bewertung der Vereinbarkeit der Website mit dem WZG zur Umsetzung der Anforderungen der Richtlinie (EU) 2016/2102 erfolgte in Form eines Selbsttests nach WCAG 2.2 (Level AA). Geprüft wurden die Startseite, die Inhaltsseiten sowie die Editor-Komponenten.</p>
+
+            <h2>Feedback und Kontaktangaben</h2>
+            <p>Die Angebote und Services auf dieser Website werden laufend verbessert, ausgetauscht und ausgebaut. Dabei ist uns die Bedienbarkeit und Zugänglichkeit ein großes Anliegen.</p>
+            <p>Wenn Ihnen Barrieren auffallen, die Sie an der Benutzung unserer Website behindern, bitten wir Sie, uns diese per E-Mail mitzuteilen. Wir werden Ihre Anfrage prüfen und Sie umgehend kontaktieren.</p>
+
+            <div class="contact-section">
+                <h3>Kontaktstelle für Barrierefreiheit</h3>
+                <p><strong>MAKEYOURCASE GmbH</strong></p>
+                <p>E-Mail: <a href="mailto:accessibility@makeyourcase.at" style="color: var(--primary); font-weight: bold;">accessibility@makeyourcase.at</a></p>
+                <p>Telefon: +43 681 111 111</p>
+                <p>Bitte beschreiben Sie das Problem und führen Sie die URL(s) der betroffenen Webseite oder des Dokuments an.</p>
+            </div>
+
+            <h2>Durchsetzungsverfahren gemäß § 4 Abs. 4 WZG</h2>
+            <p>Bei nicht zufriedenstellenden Antworten aus oben genannter Kontaktmöglichkeit können Sie sich mittels Beschwerde an die Österreichische Forschungsförderungsgesellschaft mit beschränkter Haftung (FFG) wenden. Die FFG nimmt Beschwerden auf elektronischem Weg über das Kontaktformular der Beschwerdestelle entgegen.</p>
+            
+            <div class="info-box">
+                <p><strong>Kontakt der Beschwerdestelle:</strong></p>
+                <p>Österreichische Forschungsförderungsgesellschaft mbH (FFG)<br>
+                Sensengasse 1, 1090 Wien<br>
+                E-Mail: <a href="mailto:beschwerde@ffg.at" style="color: var(--primary); font-weight: bold;">beschwerde@ffg.at</a><br>
+                Website: <a href="https://www.ffg.at/barrierefreiheit/beschwerdestelle" target="_blank" rel="noopener noreferrer" style="color: var(--primary); font-weight: bold;">www.ffg.at/barrierefreiheit/beschwerdestelle</a></p>
+            </div>
+            
+            <p>Diese Beschwerden werden von der FFG dahingehend geprüft, ob sie Verstöße gegen die Vorgaben des Web-Zugänglichkeits-Gesetzes, insbesondere Mängel bei der Einhaltung der Barrierefreiheitsanforderungen, durch den Bund oder einer ihm zuordenbaren Einrichtung betreffen. Sofern die Beschwerde berechtigt ist, hat die FFG dem Bund oder den betroffenen Rechtsträgern Handlungsempfehlungen auszusprechen und Maßnahmen vorzuschlagen, die der Beseitigung der vorliegenden Mängel dienen.</p>
         </div>
     </main>
 
-    <footer>
+<footer>
         <div class="footer-container">
             <div class="footer-section">
                 <h3>MAKEYOURCASE</h3>
@@ -215,7 +204,7 @@
                 <h3>Kontakt</h3>
                 <p>Email: info@makeyourcase.at</p>
                 <p>Support: support@makeyourcase.at</p>
-                <p>Standort: Österreich</p>
+                <p>Standort: Wien, Österreich</p>
             </div>
             <div class="footer-section">
                 <h3>Information</h3>
@@ -226,12 +215,12 @@
                     <li><a href="barrierefrei.html">Barrierefreiheit</a></li>
                     <li><a href="about.html">Über uns</a></li>
                     <li><a href="lizenzen.html">Credits & Lizenzen</a></li>
-                    <li><a href="lizenzvereinbarung.html">Lizenzvereinbarung</a></li>
+                    <li><a href="lizenzvereinbarung.html">Lizenz</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Technologie</h3>
-                <p>Hochleistungs-Drucker Integration. 300 DPI Hochauflösungs-Druck. UV-beständige Premium-Farben. Modern responsive Design.</p>
+                <p>Hochleistungs-Drucker Integration. Modern responsive Design.</p>
             </div>
         </div>
         <div class="footer-bottom">

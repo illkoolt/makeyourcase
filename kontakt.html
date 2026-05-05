@@ -280,8 +280,8 @@
                 <li><a href="features.html">Features</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="about.html">Über uns</a></li>
-                <li><a href="datenschutz.html">Datenschutz</a></li>
-                <li><a href="barrierefrei.html">Barrierefreiheit</a></li>
+                <!-- <li><a href="datenschutz.html">Datenschutz</a></li>
+                <li><a href="barrierefrei.html">Barrierefreiheit</a></li> -->
             </ul>
         </div>
     </nav>
@@ -290,7 +290,7 @@
         <section class="hero-banner">
             <div class="hero-content">
                 <h1>Kontaktieren Sie uns</h1>
-                <p>Wir freuen uns auf Ihre Fragen und Anregungen!</p>
+                <p>Wir freuen uns auf Ihre Fragen!</p>
             </div>
         </section>
 
@@ -334,15 +334,10 @@
                         </div>
                     </div>
 
-                    <div class="contact-details">
-                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">🤝 Alternative Kontaktmöglichkeiten</h3>
-                        <p>Schnelle Anfragen? Nutzen Sie unser Kontaktformular auf der rechten Seite.</p>
-                        <p><strong>Telefonischer Support:</strong> Nach Anfrage per Email</p>
-                    </div>
                 </div>
 
                 <div class="contact-form-section">
-                    <h2>📝 Kontaktformular</h2>
+                    <h2>Kontaktformular</h2>
                     
                     <div id="formMessage" class="form-message"></div>
 
@@ -409,21 +404,11 @@
                 </div>
             </div>
 
-            <section style="background: var(--bg-secondary); padding: 2rem; border-radius: 12px; margin-top: 3rem;">
-                <h2 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem;">❓ Häufig gestellte Fragen</h2>
-                <p><strong>Wie lange dauert es, bis ich eine Antwort erhalte?</strong><br>
-                Wir beantworten Anfragen innerhalb von 24 Stunden (Geschäftstage).</p>
-                
-                <p style="margin-top: 1rem;"><strong>Werden meine Daten weitergegeben?</strong><br>
-                Nein, Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.</p>
 
-                <p style="margin-top: 1rem;"><strong>Kann ich auch anrufen?</strong><br>
-                Nach einer Email-Anfrage können wir Sie telefonisch kontaktieren, falls Sie dies wünschen.</p>
-            </section>
         </div>
     </main>
 
-    <footer>
+<footer>
         <div class="footer-container">
             <div class="footer-section">
                 <h3>MAKEYOURCASE</h3>
@@ -438,7 +423,7 @@
                 <h3>Kontakt</h3>
                 <p>Email: info@makeyourcase.at</p>
                 <p>Support: support@makeyourcase.at</p>
-                <p>Standort: Österreich</p>
+                <p>Standort: Wien, Österreich</p>
             </div>
             <div class="footer-section">
                 <h3>Information</h3>
@@ -449,12 +434,12 @@
                     <li><a href="barrierefrei.html">Barrierefreiheit</a></li>
                     <li><a href="about.html">Über uns</a></li>
                     <li><a href="lizenzen.html">Credits & Lizenzen</a></li>
-                    <li><a href="lizenzvereinbarung.html">Lizenzvereinbarung</a></li>
+                    <li><a href="lizenzvereinbarung.html">Lizenz</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Technologie</h3>
-                <p>Hochleistungs-Drucker Integration. 300 DPI Hochauflösungs-Druck. UV-beständige Premium-Farben. Modern responsive Design.</p>
+                <p>Hochleistungs-Drucker Integration. Modern responsive Design.</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -462,36 +447,5 @@
         </div>
     </footer>
 
-    <script>
-        // Einfache Form-Validierung und Verarbeitung
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formMessage = document.getElementById('formMessage');
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            const consent = document.getElementById('privacy-consent').checked;
-            
-            if (!consent) {
-                formMessage.textContent = 'Bitte akzeptieren Sie die Datenschutzerklärung.';
-                formMessage.className = 'form-message error';
-                return;
-            }
-            
-            // Hier würde eine Backend-Integration stattfinden
-            // Für Demo-Zwecke zeigen wir eine Erfolgsmeldung
-            formMessage.textContent = `Vielen Dank, ${name}! Ihre Nachricht wurde empfangen. Wir antworten innerhalb von 24 Stunden.`;
-            formMessage.className = 'form-message success';
-            
-            // Formular zurücksetzen
-            setTimeout(() => {
-                document.getElementById('contactForm').reset();
-                formMessage.className = 'form-message';
-            }, 3000);
-        });
-    </script>
-    <script src="js/app.js"></script>
 </body>
 </html>
