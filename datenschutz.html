@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Datenschutzerklärung - MAKEYOURCASE Handyhüllen Webshop. Informationen zum Schutz deiner Daten.">
+    <meta name="description" content="Datenschutzerklärung - MAKEYOURCASE Software-Lösungen.">
     <title>Datenschutz - MAKEYOURCASE</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
@@ -44,7 +44,7 @@
             margin-bottom: 1rem;
         }
 
-        .privacy-container ul, .privacy-container ol {
+        .privacy-container ul {
             color: var(--text-secondary);
             margin-left: 2rem;
             margin-bottom: 1rem;
@@ -63,22 +63,27 @@
             border-radius: 8px;
         }
 
-        .info-box strong {
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            color: var(--text-secondary);
+        }
+
+        th, td {
+            border: 1px solid var(--primary);
+            padding: 1rem;
+            text-align: left;
+        }
+
+        th {
+            background: var(--bg-secondary);
             color: var(--text-primary);
         }
 
         @media (max-width: 768px) {
-            .privacy-container {
-                padding: 2rem 1.5rem;
-            }
-
-            .privacy-container h1 {
-                font-size: 1.8rem;
-            }
-
-            .privacy-container h2 {
-                font-size: 1.2rem;
-            }
+            .privacy-container { padding: 2rem 1.5rem; }
+            .privacy-container h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -91,7 +96,7 @@
                 <img src="assets/images/logo text.png" alt="MAKEYOURCASE Logo">
                 <div class="logo-text">
                     <h1>MAKEYOURCASE</h1>
-                    <p>Premium Design für dein Gerät</p>
+                    <p>Web Editor für Phone Case Shops</p>
                 </div>
             </div>
         </div>
@@ -104,8 +109,6 @@
                 <li><a href="features.html">Features</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="about.html">Über uns</a></li>
-                <!-- <li><a href="datenschutz.html" class="active" aria-current="page">Datenschutz</a></li>
-                <li><a href="barrierefrei.html">Barrierefreiheit</a></li> -->
             </ul>
         </div>
     </nav>
@@ -114,230 +117,65 @@
         <div class="privacy-container">
             <h1>Datenschutzerklärung</h1>
 
-            <h2>1. Datenschutz auf einen Blick</h2>
-            <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der Datenschutz-Grundverordnung (DSGVO), des Datenschutzgesetzes (DSG) und der Österreichischen Telekommunikations-Datenschutzverordnung (TDSV).</p>
+            <h2>1. Grundlegende Informationen</h2>
+            <p>Die Verarbeitung personenbezogener Daten erfolgt gemäß der DSGVO, dem österreichischen Datenschutzgesetz (DSG) und dem Telekommunikationsgesetz (TKG).</p>
 
             <div class="info-box">
-                <strong>Verantwortlicher für die Datenverarbeitung:</strong><br>
-                MAKEYOURCASE<br>
-                Email: legal@makeyourcase.at<br>
-                Standort: Österreich<br>
-                <strong>Datenschutzbeauftragter:</strong> Illia Kolotnitskyi<br>
-                Email: illia.kolotnitskyi@makeyourcase.at<br>
-                Telefon: +43 681 111 1111
+                <strong>Verantwortlicher:</strong><br>
+                MAKEYOURCASE GmbH<br>
+                Wien, Österreich<br>
+                Email: legal@makeyourcase.at
             </div>
 
-            <h2>2. Allgemeine Hinweise</h2>
-            <p>Bei der Nutzung unserer Website werden automatisch Informationen erfasst. Dies geschieht teilweise durch so genannte Cookies. Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden und die Wiedererkennung beim erneuten Besuch ermöglichen.</p>
+            <h2>2. Webshop-Prozesse & Datenverarbeitung</h2>
+            
+            <h3>2.1 B2B-Kundenkonto & Bestellung</h3>
+            <p>Für den Erwerb unserer Software-Lizenzen verarbeiten wir Bestelldaten (Name, Unternehmen, Rechnungsadresse). Die Abwicklung erfolgt über den Zahlungsdienstleister <strong>Stripe</strong>.</p>
+            <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung).</p>
 
-            <h2>3. Erfassung von Daten bei Website-Nutzung</h2>
-            <h3>3.1 Automatisch erfasste Daten</h3>
-            <ul>
-                <li><strong>IP-Adresse:</strong> Wird automatisch von Ihrem Browser übermittelt</li>
-                <li><strong>Gerätetyp und Browser-Informationen:</strong> Bestimmung der Kompatibilität</li>
-                <li><strong>Besuchte Seiten und Verweilzeiten:</strong> Für Nutzungsanalyse</li>
-                <li><strong>Referrer-URLs:</strong> Nachverfolgung, von wo Sie auf uns verlinkt wurden</li>
-                <li><strong>Zeitstempel:</strong> Zeitpunkt des Besuchs</li>
-            </ul>
-            <p><strong>Rechtliche Grundlage:</strong> Artikel 6(1)(f) DSGVO - berechtigtes Interesse zur Infrastrukturverwaltung und Sicherheit</p>
-            <p><strong>Speicherdauer:</strong> 30 Tage, dann Anonymisierung</p>
+            <h3>2.2 Kontaktformular</h3>
+            <p>Bei Nutzung unseres Kontaktformulars werden die von Ihnen angegebenen Daten (E-Mail, Name, Nachricht) zur Bearbeitung der Anfrage gespeichert.</p>
+            <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).</p>
 
-            <h2>4. Kontaktformular & Kundenanfragen</h2>
-            <h3>4.1 Datenverarbeitung über Kontaktformular</h3>
-            <p>Wenn Sie uns über das Kontaktformular kontaktieren, erfassen wir:</p>
-            <ul>
-                <li>Name</li>
-                <li>Email-Adresse</li>
-                <li>Telefonnummer (optional)</li>
-                <li>Nachricht/Betreff</li>
-                <li>Zeitstempel der Anfrage</li>
-            </ul>
-            <p><strong>Zweck:</strong> Bearbeitung Ihrer Anfrage und Kundenkommunikation</p>
-            <p><strong>Rechtliche Grundlage:</strong> Artikel 6(1)(a) DSGVO - Ihre explizite Zustimmung durch Formularabsendung</p>
-            <p><strong>Speicherdauer:</strong> 2 Jahre nach letztem Kontakt, dann Löschung</p>
-            <p><strong>Weitergabe an Dritte:</strong> Ihre Anfrage wird nur an zuständige Support-Mitarbeiter weitergeleitet</p>
+            <h3>2.3 Analyse-Tools </h3>
+            <p>Zur Optimierung unseres Angebots nutzen wir Analyse-Tools (z.B. Google Analytics). Dabei werden Nutzungsmuster pseudonymisiert ausgewertet.</p>
+            <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung via Cookie-Banner).</p>
 
-            <h2>5. Bestellprozess & E-Commerce</h2>
-            <h3>5.1 Daten während der Bestellung</h3>
-            <p>Bei einer Bestellung erfassen wir:</p>
-            <ul>
-                <li><strong>Kundendaten:</strong> Name, Adresse, Email, Telefonnummer</li>
-                <li><strong>Design-Daten:</strong> Das hochgeladene Design / die Designdatei</li>
-                <li><strong>Bestelldaten:</strong> Produkt, Menge, Preis, Bestelldatum</li>
-                <li><strong>Zahlungsdaten:</strong> Werden NICHT von uns gespeichert (externe Payment-Provider)</li>
-                <li><strong>Versanddaten:</strong> Tracking-Nummern, Versandunternehmen</li>
-            </ul>
-            <p><strong>Rechtliche Grundlage:</strong> Artikel 6(1)(b) DSGVO - Erfüllung des Kaufvertrags</p>
-            <p><strong>Speicherdauer:</strong> 7 Jahre nach Bestellung (steuerliche Aufbewahrungspflicht in Österreich)</p>
-            <p><strong>Externe Dienstleister:</strong> Zahlungen werden über <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">Stripe</a> oder <a href="https://www.paypal.com/de/webapps/mpp/ua/privacy-full" target="_blank" rel="noopener noreferrer">PayPal</a> abgewickelt. Weitere Informationen entnehmen Sie den Datenschutzhinweisen der Anbieter.</p>
+            <h2>3. Rolle als Auftragsverarbeiter</h2>
+            <p>In Bezug auf die Fotos und Designs, die Endkunden im Web-Editor unserer Partner-Shops hochladen, agiert MAKEYOURCASE als <strong>Auftragsverarbeiter</strong> gemäß Art. 28 DSGVO. Wir verarbeiten diese Daten nur im Auftrag des jeweiligen Shop-Betreibers zur Generierung der Druckdatei.</p>
 
-            <h2>6. Analyse-Tools & Tracking</h2>
-            <h3>6.1 Google Analytics (optional aktivierbar)</h3>
-            <p><strong>Status:</strong> Dieses Tool ist auf Ihrer Website aktivierbar, aber standardmäßig deaktiviert.</p>
-            <p>Google Analytics erfasst:</p>
-            <ul>
-                <li>Anonymisierte IP-Adressen (gekürzte IPs)</li>
-                <li>Nutzungsverhalten (Seitenaufrufe, Klicks, Verweilzeiten)</li>
-                <li>Geographische Daten (Land, Stadt, Browser)</li>
-                <li>Geräteinformationen</li>
-            </ul>
-            <p><strong>Rechtliche Grundlage:</strong> Artikel 6(1)(a) DSGVO - Explizite Zustimmung (Opt-in)</p>
-            <p><strong>Datenschutzabkommen:</strong> Google LLC und der Betreiber dieser Website haben ein Data Processing Addendum (DPA) abgeschlossen</p>
-            <p><strong>Opt-Out:</strong> Sie können das Google Analytics Tracking jederzeit ablehnen (Browser-Plugin verfügbar)</p>
-
-            <h3>6.2 Matomo Alternative (zukünftig)</h3>
-            <p>Als Alternative zu Google Analytics planen wir die Implementierung von Matomo, einem datenschutzfreundlicheren Tool:</p>
-            <ul>
-                <li>Keine Weitergabe von Daten an externe Server (optional selbst gehostet)</li>
-                <li>Vollständige IP-Anonymisierung möglich</li>
-                <li>DSGVO-konform ohne Drittlandübermittlung</li>
-            </ul>
-
-            <h2>7. Cookies & Session-Management</h2>
-            <h3>7.1 Essenzielle Cookies (notwendig)</h3>
-            <p>Diese Cookies sind notwendig und können nicht abgelehnt werden:</p>
-            <ul>
-                <li><strong>Session-Cookie:</strong> Speichern Ihrer Benutzer-Session</li>
-                <li><strong>CSRF-Token:</strong> Schutz vor Cross-Site-Request-Forgery-Angriffen</li>
-                <li><strong>Warenkorb-Cookie:</strong> Speicherung Ihrer Produktauswahl</li>
-            </ul>
-            <p><strong>Speicherdauer:</strong> Session-Cookies werden beim Schließen des Browsers gelöscht</p>
-
-            <h3>7.2 Funktionale Cookies (optional)</h3>
-            <p>Mit Ihrer Zustimmung setzen wir:</p>
-            <ul>
-                <li><strong>Design-Präferenzen-Cookie:</strong> Speicherung Ihrer Farbschema-Wahl (Hell/Dunkel-Modus)</li>
-                <li><strong>Sprach-Cookie:</strong> Speicherung Ihrer Sprachauswahl</li>
-            </ul>
-            <p><strong>Speicherdauer:</strong> 365 Tage</p>
-
-            <h3>7.3 Werbe- und Tracking-Cookies</h3>
-            <p><strong>Status:</strong> Wir verwenden KEINE Werbe- oder Tracking-Cookies von Drittanbietern.</p>
-
-            <h2>8. Externe Dienstleister & Subprozessoren</h2>
-            <p>Folgende externe Unternehmen verarbeiten Ihre Daten im Auftrag von MAKEYOURCASE:</p>
-            <ul>
-                <li><strong>Stripe / PayPal:</strong> Zahlungsverarbeitung (PCI-DSS zertifiziert). Datenschutzbestimmungen: <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">Stripe Privacy</a>, <a href="https://www.paypal.com/de/webapps/mpp/ua/privacy-full" target="_blank" rel="noopener noreferrer">PayPal Privacy</a>.</li>
-                <li><strong>DHL / PostAT:</strong> Versandabwicklung</li>
-                <li><strong>Druckerei-Partner:</strong> Produktion und Druck der Handyhüllen</li>
-                <li><strong>Mailchimp (optional):</strong> Newsletter-Verwaltung (nur bei Anmeldung)</li>
-            </ul>
-            <p><strong>Datenschutzabkommen:</strong> Alle Dienstleister haben mit uns Datenverarbeitungsabkommen (DPA) abgeschlossen und sind DSGVO-konform.</p>
-
-            <h2>9. Ihre Rechte nach der DSGVO</h2>
-            <p>Sie haben folgende Rechte bezüglich Ihrer personenbezogenen Daten:</p>
-            <ul>
-                <li><strong>Auskunftsrecht (Art. 15 DSGVO):</strong> Sie können jederzeit Auskunft über Ihre gespeicherten Daten erhalten</li>
-                <li><strong>Berichtigungsrecht (Art. 16 DSGVO):</strong> Sie können fehlerhafte Daten korrigieren lassen</li>
-                <li><strong>Löschungsrecht (Art. 17 DSGVO):</strong> Sie können die Löschung Ihrer Daten verlangen („Recht auf Vergessenwerden")</li>
-                <li><strong>Einschränkungsrecht (Art. 18 DSGVO):</strong> Sie können die Einschränkung der Datenverarbeitung verlangen</li>
-                <li><strong>Datenportabilität (Art. 20 DSGVO):</strong> Sie können Ihre Daten in strukturierter, maschinenlesbarer Form erhalten</li>
-                <li><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Sie können der Verarbeitung widersprechen</li>
-                <li><strong>Beschwerde einreichen:</strong> Sie können die Österreichische Datenschutzbehörde (dsb@dsb.gv.at) einschalten</li>
-            </ul>
-
-            <p><strong>Anfragen einreichen:</strong> Bitte senden Sie Ihre Anfrage an legal@makeyourcase.at. Wir antworten innerhalb von 30 Tagen.</p>
-
-            <h2>10. Datensicherheit</h2>
-            <ul>
-                <li><strong>SSL/TLS-Verschlüsselung:</strong> Alle Datenübertragungen erfolgen verschlüsselt (HTTPS)</li>
-                <li><strong>Sichere Passwort-Hashing:</strong> Passwörter werden mit bcrypt gehashed</li>
-                <li><strong>Zwei-Faktor-Authentisierung:</strong> Optional für Benutzerkonto</li>
-                <li><strong>Firewalls & Intrusion Detection:</strong> Automatische Sicherheitsüberwachung</li>
-                <li><strong>Regelmäßige Backups:</strong> Tägliche Sicherungen mit Verschlüsselung</li>
-                <li><strong>Datenzugriff beschränkt:</strong> Nur autorisierte Mitarbeiter haben Zugriff auf Kundendaten</li>
-            </ul>
-
-            <h2>11. Keine Weitergabe an Drittländer</h2>
-            <p>Ihre Daten werden <strong>nicht</strong> außerhalb der Europäischen Union oder des Europäischen Wirtschaftsraums (EWR) übertragen, ausgenommen:</p>
-            <ul>
-                <li><strong>Stripe/PayPal:</strong> Diese haben Standardschutzklauseln abgeschlossen (Art. 46 DSGVO)</li>
-                <li><strong>Kundenwunsch:</strong> Wenn Sie ein Produkt in ein Drittland versenden möchten</li>
-            </ul>
-
-            <h2>12. Zweckbindung & Datenminimierung</h2>
-            <p>Wir erheben Ihre Daten ausschließlich für folgende Zwecke:</p>
-            <ul>
-                <li><strong>Vertragserfüllung (Bestellabwicklung):</strong> Art. 6 Abs. 1 lit. b DSGVO</li>
-                <li><strong>Kundenkommunikation und Support:</strong> Art. 6 Abs. 1 lit. b DSGVO sowie Art. 6 Abs. 1 lit. f DSGVO für berechtigte Interessen an einer effizienten Kundenbetreuung</li>
-                <li><strong>Gesetzliche Verpflichtungen (Steuern, Rechnungswesen):</strong> Art. 6 Abs. 1 lit. c DSGVO</li>
-                <li><strong>Website-Verbesserung und Fehleranalyse:</strong> Art. 6 Abs. 1 lit. f DSGVO</li>
-                <li><strong>Sicherheit und Betrugsprävention:</strong> Art. 6 Abs. 1 lit. f DSGVO</li>
-            </ul>
-            <p>Wir erheben nur die Daten, die für diese Zwecke notwendig sind (Datenminimierung).</p>
-
-            <h2>13. Datenspeicherdauer: Übersicht</h2>
-            <table style="width: 100%; border-collapse: collapse; margin: 2rem 0;">
-                <tr style="background: var(--bg-secondary);">
-                    <th style="border: 1px solid var(--primary); padding: 1rem; text-align: left;"><strong>Datentyp</strong></th>
-                    <th style="border: 1px solid var(--primary); padding: 1rem; text-align: left;"><strong>Speicherdauer</strong></th>
-                    <th style="border: 1px solid var(--primary); padding: 1rem; text-align: left;"><strong>Grund</strong></th>
-                </tr>
-                <tr>
-                    <td style="border: 1px solid var(--primary); padding: 1rem;">Website-Logs</td>
-                    <td style="border: 1px solid var(--primary); padding: 1rem;">30 Tage</td>
-                    <td style="border: 1px solid var(--primary); padding: 1rem;">Sicherheit</td>
-                </tr>
-                <tr>
-                    <td style="border: 1px solid var(--primary); padding: 1rem;">Kontaktformular</td>
-                    <td style="border: 1px solid var(--primary); padding: 1rem;">2 Jahre</td>
-                    <td style="border: 1px solid var(--primary); padding: 1rem;">Kundenbeziehung</td>
-                </tr>
-                <tr>
-                    <td style="border: 1px solid var(--primary); padding: 1rem;">Bestelldaten</td>
-                    <td style="border: 1px solid var(--primary); padding: 1rem;">7 Jahre</td>
-                    <td style="border: 1px solid var(--primary); padding: 1rem;">Steuern (UStG)</td>
-                </tr>
-                <tr>
-                    <td style="border: 1px solid var(--primary); padding: 1rem;">Design-Dateien</td>
-                    <td style="border: 1px solid var(--primary); padding: 1rem;">5 Jahre nach letzter Nutzung</td>
-                    <td style="border: 1px solid var(--primary); padding: 1rem;">Nachbestellungen</td>
-                </tr>
-                <tr>
-                    <td style="border: 1px solid var(--primary); padding: 1rem;">Analytics-Daten</td>
-                    <td style="border: 1px solid var(--primary); padding: 1rem;">26 Monate</td>
-                    <td style="border: 1px solid var(--primary); padding: 1rem;">Automatische Löschung durch Google</td>
-                </tr>
+            <h2>4. Cookies & Speicherdauer</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tool / Cookie</th>
+                        <th>Zweck</th>
+                        <th>Dauer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Session-ID</td>
+                        <td>Technisch notwendig (Login/Editor-Status)</td>
+                        <td>Sitzungsende</td>
+                    </tr>
+                    <tr>
+                        <td>_ga (Analytics)</td>
+                        <td>Besucheranalyse (pseudonymisiert)</td>
+                        <td>2 Jahre</td>
+                    </tr>
+                    <tr>
+                        <td>Stripe-Token</td>
+                        <td>Sichere Zahlungsabwicklung</td>
+                        <td>Sitzungsende</td>
+                    </tr>
+                </tbody>
             </table>
 
-            <h2>14. Automatisierte Entscheidungen & Profiling</h2>
-            <p>Wir treffen <strong>keine automatisierten Entscheidungen</strong> auf Basis Ihrer Daten und erstellen <strong>kein Profiling</strong> für Werbezwecke oder Risikoanalyse.</p>
-            <p>Dies gilt auch nicht für:</p>
-            <ul>
-                <li>Scoring bei der Kreditvergabe (wir vergeben keine Kredite)</li>
-                <li>Verhaltenserkennung für gezielte Werbung</li>
-                <li>Automatische Klassifizierung in Kundenkategorien</li>
-            </ul>
+            <h2>5. Betroffenenrechte</h2>
+            <p>Ihnen stehen die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch zu. Beschwerden können an die <strong>Österreichische Datenschutzbehörde</strong> (www.dsb.gv.at) gerichtet werden.</p>
 
-            <h2>15. Änderungen dieser Datenschutzerklärung</h2>
-            <p>Diese Datenschutzerklärung ist gültig ab <strong>28. April 2026</strong>. Wir können diese Erklärung jederzeit aktualisieren. Änderungen werden auf dieser Seite veröffentlicht und sind ohne vorherige Ankündigung wirksam.</p>
-
-            <div class="info-box">
-                <strong>Fragen zum Datenschutz?</strong><br>
-                Email: legal@makeyourcase.at<br>
-                Telefon: +43 111 222 111<br>
-                Adresse: Österreich<br>
-                <strong>Datenschutzbeauftragter:</strong> Illia Kolotnitskyi<br>
-                Email: illia.kolotnitskyi@makeyourcase.at
-            </div>
-
-            <div class="info-box">
-                <strong>💡 Hinweis für deutsche Bewerbungen:</strong><br>
-                Ein deutsches Motivationsschreiben für eine Bewerbung in Österreich sollte am Ende einen Hinweis auf den freien Zugang zum österreichischen Arbeitsmarkt enthalten.
-            </div>
-
-            <h2>16. Urheberrecht & Medienlizenzen</h2>
-            <p>Für diese Website werden nur Medien mit klaren Nutzungsrechten verwendet. Die eingesetzten Ressourcen stammen überwiegend aus frei nutzbaren Stockdatenbanken und sind für kommerzielle Zwecke lizenzierbar.</p>
-            <ul>
-                <li><strong>Bilder & Grafiken:</strong> Bilder wurden von Unsplash verwendet. Quelle: <a href="https://unsplash.com/s/photos/phone-case?license=free">Unsplash Phone Case Lizenzfrei</a>.</li>
-                <li><strong>Videos & Animationen:</strong> Das Video wurde von Pexels genutzt. Quelle: <a href="https://www.pexels.com/video/transparent-mobile-case-on-white-background-29609509/">Pexels Video</a>.</li>
-                <li><strong>Musik & Soundeffekte:</strong> Aktuell sind keine Musik- oder Sounddateien eingebunden.</li>
-                <li><strong>Schriftarten:</strong> Verwendet werden Systemschriftarten wie 'Segoe UI', 'Helvetica Neue' und -apple-system. Diese sind ohne zusätzliche Lizenzkosten einsetzbar.</li>
-                <li><strong>Texte:</strong> Die auf der Website verwendeten Texte wurden eigenständig erstellt und sind urheberrechtlich geschützt.</li>
-            </ul>
-            <p>Wir dokumentieren die Herkunft und Verwertungsrechte jeder neuen Mediendatei sorgfältig und verwenden nur lizenzkonforme Inhalte.</p>
-
-            <p style="margin-top: 3rem; font-size: 0.9rem; color: var(--text-secondary);"><em>Zuletzt aktualisiert: April 2026</em></p>
+            <p style="margin-top: 3rem; font-size: 0.9rem; color: var(--text-secondary);">Stand: Mai 2026</p>
         </div>
     </main>
 
@@ -366,7 +204,7 @@
                     <li><a href="datenschutz.html">Datenschutz</a></li>
                     <li><a href="barrierefrei.html">Barrierefreiheit</a></li>
                     <li><a href="about.html">Über uns</a></li>
-                    <li><a href="lizenzen.html">Credits & Lizenzen</a></li>
+                    <li><a href="lizenzen.html">Credits</a></li>
                     <li><a href="lizenzvereinbarung.html">Lizenz</a></li>
                 </ul>
             </div>
@@ -379,7 +217,5 @@
             <p>&copy; 2026 MAKEYOURCASE. Die webbasierte Editor-Lösung für Handyhüllen-Shops. Verwandle Designs in Profit.</p>
         </div>
     </footer>
-
-    <script src="js/app.js"></script>
 </body>
 </html>
